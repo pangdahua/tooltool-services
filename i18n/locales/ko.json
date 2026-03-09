@@ -1,0 +1,75 @@
+{
+  "site": {
+    "name": "ToolSpace",
+    "tagline": "누구나 사용할 수 있는 무료 온라인 도구",
+    "description": "ToolSpace는 무료로 빠르고 간편하게 사용할 수 있는 온라인 도구 모음을 제공합니다. 가입이 필요 없습니다."
+  },
+  "nav": {
+    "home": "홈",
+    "tools": "도구",
+    "about": "소개"
+  },
+  "footer": {
+    "copyright": "© {year} ToolSpace. 모든 권리 보유.",
+    "privacy": "개인정보처리방침",
+    "terms": "이용약관"
+  },
+  "common": {
+    "download": "다운로드",
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다. 다시 시도해 주세요.",
+    "success": "성공!",
+    "paste": "붙여넣기",
+    "clear": "지우기",
+    "copy": "복사",
+    "copied": "복사됨!",
+    "tryAgain": "다시 시도",
+    "free": "무료",
+    "noRegistration": "가입 불필요"
+  },
+  "home": {
+    "hero": {
+      "title": "당신의 도구 상자,\n간단하고 효율적",
+      "subtitle": "무료 온라인 도구, 가입 없이 바로 사용하세요."
+    },
+    "tools": {
+      "title": "사용 가능한 도구",
+      "viewAll": "전체 보기"
+    }
+  },
+  "tools": {
+    "douyinDownloader": {
+      "name": "더우인 동영상 다운로더",
+      "shortDesc": "워터마크 없이 더우인 동영상 다운로드",
+      "description": "더우인 공유 링크를 붙여넣어 워터마크 없이 동영상을 다운로드하세요. 빠르고 무료이며 가입이 필요 없습니다.",
+      "inputPlaceholder": "여기에 더우인 공유 링크를 붙여넣으세요...",
+      "downloadBtn": "동영상 다운로드",
+      "downloading": "처리 중...",
+      "instructions": {
+        "title": "사용 방법",
+        "step1": "더우인 앱을 열고 다운로드할 동영상을 찾으세요",
+        "step2": "공유 버튼을 눌러 링크를 복사하세요",
+        "step3": "위의 입력란에 링크를 붙여넣고 다운로드를 클릭하세요",
+        "step4": "동영상을 기기에 저장하세요"
+      },
+      "result": {
+        "title": "동영상 정보",
+        "videoTitle": "제목",
+        "author": "작성자",
+        "downloadVideo": "동영상 다운로드",
+        "downloadAudio": "오디오 다운로드",
+        "preview": "미리보기"
+      },
+      "errors": {
+        "invalidUrl": "유효한 더우인 공유 링크를 입력해 주세요",
+        "turnstileFailed": "보안 인증에 실패했습니다. 다시 시도해 주세요.",
+        "parseFailed": "동영상 분석에 실패했습니다. 링크가 유효하지 않거나 만료되었을 수 있습니다.",
+        "networkError": "네트워크 오류입니다. 인터넷 연결을 확인해 주세요."
+      },
+      "seo": {
+        "title": "더우인 동영상 다운로더 - 워터마크 없이 다운로드 | ToolSpace",
+        "description": "무료 온라인 더우인 동영상 다운로드 도구. 워터마크 없이 고화질 더우인 동영상을 다운로드하세요. 가입 불필요."
+      }
+    }
+  }
+}

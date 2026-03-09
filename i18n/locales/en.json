@@ -1,0 +1,75 @@
+{
+  "site": {
+    "name": "ToolSpace",
+    "tagline": "Free Online Tools for Everyone",
+    "description": "ToolSpace provides a collection of free, fast, and easy-to-use online tools. No registration required."
+  },
+  "nav": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About"
+  },
+  "footer": {
+    "copyright": "© {year} ToolSpace. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "download": "Download",
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again.",
+    "success": "Success!",
+    "paste": "Paste",
+    "clear": "Clear",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "tryAgain": "Try Again",
+    "free": "Free",
+    "noRegistration": "No registration required"
+  },
+  "home": {
+    "hero": {
+      "title": "Your Toolkit,\nSimplified",
+      "subtitle": "Free online tools that just work. No sign-up, no hassle."
+    },
+    "tools": {
+      "title": "Available Tools",
+      "viewAll": "View All"
+    }
+  },
+  "tools": {
+    "douyinDownloader": {
+      "name": "Douyin Video Downloader",
+      "shortDesc": "Download Douyin/TikTok videos without watermark",
+      "description": "Paste a Douyin share link to download videos without watermark. Fast, free, and no registration required.",
+      "inputPlaceholder": "Paste Douyin share link here...",
+      "downloadBtn": "Download Video",
+      "downloading": "Processing...",
+      "instructions": {
+        "title": "How to Use",
+        "step1": "Open the Douyin app and find the video you want to download",
+        "step2": "Tap the share button and copy the link",
+        "step3": "Paste the link above and click Download",
+        "step4": "Save the video to your device"
+      },
+      "result": {
+        "title": "Video Details",
+        "videoTitle": "Title",
+        "author": "Author",
+        "downloadVideo": "Download Video",
+        "downloadAudio": "Download Audio",
+        "preview": "Preview"
+      },
+      "errors": {
+        "invalidUrl": "Please enter a valid Douyin share link",
+        "turnstileFailed": "Security verification failed. Please try again.",
+        "parseFailed": "Failed to parse the video. The link may be invalid or expired.",
+        "networkError": "Network error. Please check your connection."
+      },
+      "seo": {
+        "title": "Douyin Video Downloader - Download Without Watermark | ToolSpace",
+        "description": "Free online Douyin video downloader. Download TikTok China (Douyin) videos without watermark in high quality. No registration required."
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "site": {
+    "name": "ToolSpace",
+    "tagline": "人人可用的免費線上工具",
+    "description": "ToolSpace 提供一系列免費、快速、易用的線上工具，無需註冊即可使用。"
+  },
+  "nav": {
+    "home": "首頁",
+    "tools": "工具",
+    "about": "關於"
+  },
+  "footer": {
+    "copyright": "© {year} ToolSpace. 保留所有權利。",
+    "privacy": "隱私權政策",
+    "terms": "服務條款"
+  },
+  "common": {
+    "download": "下載",
+    "loading": "載入中...",
+    "error": "發生錯誤，請重試。",
+    "success": "成功！",
+    "paste": "貼上",
+    "clear": "清除",
+    "copy": "複製",
+    "copied": "已複製！",
+    "tryAgain": "重試",
+    "free": "免費",
+    "noRegistration": "無需註冊"
+  },
+  "home": {
+    "hero": {
+      "title": "你的工具箱，\n簡單高效",
+      "subtitle": "免費線上工具，即開即用，無需註冊。"
+    },
+    "tools": {
+      "title": "可用工具",
+      "viewAll": "查看全部"
+    }
+  },
+  "tools": {
+    "douyinDownloader": {
+      "name": "抖音影片下載器",
+      "shortDesc": "下載無浮水印抖音影片",
+      "description": "貼上抖音分享連結，即可下載無浮水印影片。快速、免費，無需註冊。",
+      "inputPlaceholder": "在此貼上抖音分享連結...",
+      "downloadBtn": "下載影片",
+      "downloading": "處理中...",
+      "instructions": {
+        "title": "使用方法",
+        "step1": "開啟抖音 App，找到要下載的影片",
+        "step2": "點擊分享按鈕，複製連結",
+        "step3": "將連結貼到上方輸入框，點擊下載",
+        "step4": "將影片儲存到您的裝置"
+      },
+      "result": {
+        "title": "影片詳情",
+        "videoTitle": "標題",
+        "author": "作者",
+        "downloadVideo": "下載影片",
+        "downloadAudio": "下載音訊",
+        "preview": "預覽"
+      },
+      "errors": {
+        "invalidUrl": "請輸入有效的抖音分享連結",
+        "turnstileFailed": "安全驗證失敗，請重試。",
+        "parseFailed": "影片解析失敗，連結可能無效或已過期。",
+        "networkError": "網路錯誤，請檢查您的網路連線。"
+      },
+      "seo": {
+        "title": "抖音影片下載器 - 無浮水印下載 | ToolSpace",
+        "description": "免費線上抖音影片下載工具，支援無浮水印高畫質下載抖音影片。無需註冊，即可使用。"
+      }
+    }
+  }
+}
