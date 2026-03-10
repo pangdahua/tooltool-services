@@ -1,13 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["nitro-cloudflare-dev", 
+  modules: [
     '@nuxthub/core',
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxtjs/turnstile',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    'nitro-cloudflare-dev'
   ],
 
   // Global CSS
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
   // https://devtools.nuxt.com
   devtools: { enabled: true },
 
-  compatibilityDate: '2025-03-01',
+  compatibilityDate: 'latest',
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {
@@ -47,7 +48,7 @@ export default defineNuxtConfig({
 
   // Turnstile
   turnstile: {
-    // siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY
+    siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY
   },
 
   // Sitemap
