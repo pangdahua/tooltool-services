@@ -13,7 +13,7 @@ const TOOL_LIMITS: Record<ToolName, number> = {
 }
 
 /** Default limit if tool is not in the config */
-const DEFAULT_LIMIT = 10
+const DEFAULT_LIMIT = 1
 
 /**
  * Get today's date string in YYYY-MM-DD format (UTC)
@@ -29,17 +29,16 @@ function getTodayDate(): string {
  * @param event - H3 event
  * @param toolName - Tool identifier
  */
-export async function checkRateLimit(event: H3Event, toolName: ToolName): Promise<boolean> {
+export async function reachedRateLimit(event: H3Event, toolName: ToolName): Promise<boolean> {
   const ip = getRequestIP(event, { xForwardedFor: true }) || '127.0.0.1'
   const today = getTodayDate()
-  const maxRequests = TOOL_LIMITS[toolName] ?? DEFAULT_LIMIT
+  const maxRequests = DEFAULT_LIMIT
   // Find existing record
   const row = await db.select({
     total: rate_limits.count
   }).from(schema.rate_limits).where(and(
     eq(schema.rate_limits.ip, ip),
-    eq(schema.rate_limits.sync_date, today),
-    eq(schema.rate_limits.tool, toolName)
+    eq(schema.rate_limits.sync_date, today)
   )).limit(1)
 
   if (row.length == 0) {
@@ -50,11 +49,11 @@ export async function checkRateLimit(event: H3Event, toolName: ToolName): Promis
       count: 1,
       createdAt: (new Date())
     })
-    return true
+    return false
   }
   else {
     if (row[0].total >= maxRequests) {
-      return false
+      return true
     }
     await db.update(schema.rate_limits).set({
       count: row[0].total + 1
@@ -63,6 +62,6 @@ export async function checkRateLimit(event: H3Event, toolName: ToolName): Promis
       eq(schema.rate_limits.sync_date, today),
       eq(schema.rate_limits.tool, toolName)
     ))
-    return true
+    return false
   }
 }

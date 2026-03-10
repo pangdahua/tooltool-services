@@ -1,21 +1,11 @@
 import { sendSuccess, sendApiError, BusinessError, type ApiResponse } from '../../utils/apiResponse'
 import { TOOLS } from '../../utils/constants'
-import { checkRateLimit } from '../../utils/rateLimit'
+import { reachedRateLimit } from '../../utils/RateLimit'
 
-interface DownloadItem {
-  type: 'video' | 'audio'
-  quality: string
-  url: string
-  cover: string
-  size?: string
-  duration?: string
-}
 
 interface DouyinVideoResult {
-  title: string
-  author: string
-  avatar?: string
-  items: DownloadItem[]
+  title?: string
+  downloadUrls: string[]
 }
 
 export default eventHandler(async (event): Promise<ApiResponse<DouyinVideoResult | null>> => {
@@ -37,7 +27,7 @@ export default eventHandler(async (event): Promise<ApiResponse<DouyinVideoResult
       throw new BusinessError('tools.douyinDownloader.errors.turnstileFailed', 'Cloudflare Turnstile verification failed')
     }
 
-    if (!(await checkRateLimit(event, TOOLS.DOUYIN_DOWNLOADER))) {
+    if ((await reachedRateLimit(event, TOOLS.DOUYIN_DOWNLOADER))) {
       throw new BusinessError('common.errors.rateLimit', 'Rate limit exceeded')
     }
 
@@ -60,23 +50,48 @@ export default eventHandler(async (event): Promise<ApiResponse<DouyinVideoResult
   }
 })
 
-async function parseDouyinVideo(_shareUrl: string): Promise<DouyinVideoResult> {
-  return {
-    title: 'Video parsing not yet implemented',
-    author: 'ToolSpace',
-    items: [
-      {
-        type: 'video',
-        quality: 'HD',
-        url: '',
-        cover: ''
-      },
-      {
-        type: 'audio',
-        quality: 'MP3',
-        url: '',
-        cover: ''
+interface TikhubResponse {
+  code: number
+  data: {
+    aweme_detail: {
+      preview_title?: string
+      desc?: string
+      video?: {
+        download_addr: {
+          url_list: string[]
+        }
       }
-    ]
+      author?: {
+        nickname: string
+        avatar_thumb?: {
+          url_list: string[]
+        }
+      }
+    }
+  }
+}
+
+async function parseDouyinVideo(_shareUrl: string): Promise<DouyinVideoResult> {
+  const tikhubClient = new TikhubClient(process.env.NUXT_TIKHUB_TOKEN as string)
+  const result = await tikhubClient.fetchOneVideoByShareUrl(_shareUrl) as TikhubResponse
+
+  const { code, data } = result
+  if (code !== 200 || !data) {
+    throw new BusinessError('tools.douyinDownloader.errors.parseFailed', 'Failed to parse Douyin video: API error')
+  }
+
+  const detail = data.aweme_detail
+  if (!detail) {
+    throw new BusinessError('tools.douyinDownloader.errors.parseFailed', 'Failed to parse Douyin video: No detail found')
+  }
+
+  const urlList = (detail.video?.download_addr?.url_list || []) as string[]
+  if (urlList.length === 0) {
+    throw new BusinessError('tools.douyinDownloader.errors.parseFailed', 'Failed to parse Douyin video: No download URLs found')
+  }
+
+  return {
+    title: detail.preview_title || detail.desc,
+    downloadUrls: urlList
   }
 }
