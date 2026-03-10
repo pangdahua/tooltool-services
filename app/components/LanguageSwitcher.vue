@@ -1,5 +1,8 @@
 <template>
-  <div class="lang-switcher" ref="dropdownRef">
+  <div
+    ref="dropdownRef"
+    class="lang-switcher"
+  >
     <button
       class="lang-btn"
       :aria-label="'Language: ' + currentLocaleName"
@@ -7,11 +10,17 @@
     >
       <span class="lang-icon">🌐</span>
       <span class="lang-code">{{ currentLocaleCode }}</span>
-      <span class="lang-arrow" :class="{ open: isOpen }">▾</span>
+      <span
+        class="lang-arrow"
+        :class="{ open: isOpen }"
+      >▾</span>
     </button>
 
     <Transition name="dropdown">
-      <div v-if="isOpen" class="lang-dropdown">
+      <div
+        v-if="isOpen"
+        class="lang-dropdown"
+      >
         <button
           v-for="loc in availableLocales"
           :key="loc.code"
@@ -29,13 +38,13 @@
 <script setup lang="ts">
 type LocaleCode = 'en' | 'zh-CN' | 'zh-TW' | 'ko' | 'ja'
 
-const { locale, locales, setLocale } = useI18n()
+const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const isOpen = ref(false)
 const dropdownRef = ref<HTMLElement | null>(null)
 
 const availableLocales = computed(() =>
-  (locales.value as Array<{ code: LocaleCode; name: string }>)
+  (locales.value as Array<{ code: LocaleCode, name: string }>)
 )
 
 const currentLocaleName = computed(() =>

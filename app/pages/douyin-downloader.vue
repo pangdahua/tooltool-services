@@ -6,8 +6,12 @@
         <div class="page-main">
           <!-- Page Header -->
           <div class="page-header">
-            <h1 class="page-title">{{ $t('tools.douyinDownloader.name') }}</h1>
-            <p class="page-desc">{{ $t('tools.douyinDownloader.description') }}</p>
+            <h1 class="page-title">
+              {{ $t('tools.douyinDownloader.name') }}
+            </h1>
+            <p class="page-desc">
+              {{ $t('tools.douyinDownloader.description') }}
+            </p>
           </div>
 
           <!-- Download Form -->
@@ -28,20 +32,32 @@
                 :disabled="isLoading || !url.trim()"
                 @click="handleDownload"
               >
-                <span v-if="isLoading" class="btn-spinner" />
-                <span v-else class="btn-icon">↓</span>
+                <span
+                  v-if="isLoading"
+                  class="btn-spinner"
+                />
+                <span
+                  v-else
+                  class="btn-icon"
+                >↓</span>
                 {{ isLoading ? $t('tools.douyinDownloader.downloading') : $t('tools.douyinDownloader.downloadBtn') }}
               </button>
             </div>
 
             <!-- Turnstile Widget -->
             <div class="turnstile-wrapper">
-              <NuxtTurnstile ref="turnstile" v-model="turnstileToken" />
+              <NuxtTurnstile
+                ref="turnstile"
+                v-model="turnstileToken"
+              />
             </div>
 
             <!-- Error Message -->
             <Transition name="fade">
-              <div v-if="errorMsg" class="error-message">
+              <div
+                v-if="errorMsg"
+                class="error-message"
+              >
                 <span class="error-icon">⚠</span>
                 {{ errorMsg }}
               </div>
@@ -50,14 +66,30 @@
 
           <!-- Result -->
           <Transition name="slide">
-            <div v-if="result" class="result-card">
-              <h3 class="result-title">{{ $t('tools.douyinDownloader.result.title') }}</h3>
+            <div
+              v-if="result"
+              class="result-card"
+            >
+              <h3 class="result-title">
+                {{ $t('tools.douyinDownloader.result.title') }}
+              </h3>
 
-              <div v-if="result.avatar" class="result-header">
-                <img :src="result.avatar" :alt="result.author" class="result-avatar">
+              <div
+                v-if="result.avatar"
+                class="result-header"
+              >
+                <img
+                  :src="result.avatar"
+                  :alt="result.author"
+                  class="result-avatar"
+                >
                 <div class="result-meta">
-                  <div class="result-author">{{ result.author }}</div>
-                  <div class="result-video-title">{{ result.title }}</div>
+                  <div class="result-author">
+                    {{ result.author }}
+                  </div>
+                  <div class="result-video-title">
+                    {{ result.title }}
+                  </div>
                 </div>
               </div>
 
@@ -68,16 +100,35 @@
                   class="result-item"
                 >
                   <div class="item-cover">
-                    <img :src="item.cover" :alt="item.type">
+                    <img
+                      :src="item.cover"
+                      :alt="item.type"
+                    >
                   </div>
                   <div class="item-info">
                     <div class="item-type">
-                      <span v-if="item.type === 'video'" class="type-badge type-video">视频</span>
-                      <span v-else class="type-badge type-audio">音频</span>
+                      <span
+                        v-if="item.type === 'video'"
+                        class="type-badge type-video"
+                      >视频</span>
+                      <span
+                        v-else
+                        class="type-badge type-audio"
+                      >音频</span>
                       <span class="quality-badge">{{ item.quality }}</span>
                     </div>
-                    <div v-if="item.size" class="item-size">{{ item.size }}</div>
-                    <div v-if="item.duration" class="item-duration">{{ item.duration }}</div>
+                    <div
+                      v-if="item.size"
+                      class="item-size"
+                    >
+                      {{ item.size }}
+                    </div>
+                    <div
+                      v-if="item.duration"
+                      class="item-duration"
+                    >
+                      {{ item.duration }}
+                    </div>
                   </div>
                   <a
                     v-if="item.url"
@@ -86,10 +137,22 @@
                     rel="noopener"
                     class="item-download-btn"
                   >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
                       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                       <polyline points="7 10 12 15 17 10" />
-                      <line x1="12" y1="15" x2="12" y2="3" />
+                      <line
+                        x1="12"
+                        y1="15"
+                        x2="12"
+                        y2="3"
+                      />
                     </svg>
                     下载
                   </a>
@@ -99,11 +162,16 @@
           </Transition>
 
           <!-- Ad after result -->
-          <AdBanner slot="douyin-result" variant="responsive" />
+          <AdBanner
+            ad-slot="douyin-result"
+            variant="responsive"
+          />
 
           <!-- Instructions -->
           <div class="instructions-card">
-            <h2 class="instructions-title">{{ $t('tools.douyinDownloader.instructions.title') }}</h2>
+            <h2 class="instructions-title">
+              {{ $t('tools.douyinDownloader.instructions.title') }}
+            </h2>
             <ol class="steps-list">
               <li class="step-item">
                 <span class="step-num">1</span>
@@ -127,7 +195,10 @@
 
         <!-- Sidebar (Desktop Ad) -->
         <aside class="page-sidebar">
-          <AdBanner slot="douyin-sidebar" variant="rectangle" />
+          <AdBanner
+            ad-slot="douyin-sidebar"
+            variant="rectangle"
+          />
         </aside>
       </div>
     </div>
@@ -168,12 +239,21 @@ interface DownloadResult {
   items: DownloadItem[]
 }
 
+interface ApiResponse<T = any> {
+  error: boolean
+  errorKey?: string
+  message?: string
+  data?: T
+}
+
 const result = ref<DownloadResult | null>(null)
 
 // Validate URL
 function isValidDouyinUrl(input: string): boolean {
   return /douyin\.com|iesdouyin\.com|v\.douyin\.com/i.test(input)
 }
+
+const { showError } = useGlobalError()
 
 // Handle download
 async function handleDownload() {
@@ -196,7 +276,7 @@ async function handleDownload() {
   isLoading.value = true
 
   try {
-    const data = await $fetch('/api/douyin/download', {
+    const response = await $fetch<ApiResponse<DownloadResult>>('/api/douyin/download', {
       method: 'POST',
       body: {
         url: trimmed,
@@ -204,19 +284,16 @@ async function handleDownload() {
       }
     })
 
-    result.value = data as DownloadResult
+    if (response.error) {
+      showError(response.errorKey || 'common.error', response.message)
+      return
+    }
+
+    result.value = response.data as DownloadResult
   }
-  catch (err: any) {
-    const statusCode = err?.response?.status || err?.statusCode
-    if (statusCode === 403) {
-      errorMsg.value = t('tools.douyinDownloader.errors.turnstileFailed')
-    }
-    else if (statusCode === 422) {
-      errorMsg.value = t('tools.douyinDownloader.errors.parseFailed')
-    }
-    else {
-      errorMsg.value = t('tools.douyinDownloader.errors.networkError')
-    }
+  catch (err: unknown) {
+    console.error('Download error:', err)
+    showError('tools.douyinDownloader.errors.networkError')
   }
   finally {
     isLoading.value = false

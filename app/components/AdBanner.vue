@@ -1,10 +1,14 @@
 <template>
-  <div v-if="adsenseId" class="ad-banner" :class="[`ad-${variant}`]">
+  <div
+    v-if="adsenseId"
+    class="ad-banner"
+    :class="[`ad-${variant}`]"
+  >
     <ins
       class="adsbygoogle"
       :style="adStyle"
       :data-ad-client="adsenseId"
-      :data-ad-slot="slot"
+      :data-ad-slot="adSlot"
       :data-ad-format="format"
       data-full-width-responsive="true"
     />
@@ -13,7 +17,7 @@
 
 <script setup lang="ts">
 interface Props {
-  slot: string
+  adSlot: string
   variant?: 'leaderboard' | 'rectangle' | 'responsive'
   format?: string
 }

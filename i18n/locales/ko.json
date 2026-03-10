@@ -25,7 +25,13 @@
     "copied": "복사됨!",
     "tryAgain": "다시 시도",
     "free": "무료",
-    "noRegistration": "가입 불필요"
+    "noRegistration": "가입 불필요",
+    "errors": {
+      "rateLimit": "속도 제한을 초과했습니다. 내일 다시 시도해 주세요.",
+      "turnstile": "보안 확인에 실패했습니다. 다시 시도해 주세요.",
+      "invalidInput": "입력이 잘못되었습니다. 데이터를 확인해 주세요.",
+      "serverError": "서버 내부 오류가 발생했습니다. 나중에 다시 시도해 주세요."
+    }
   },
   "home": {
     "hero": {
@@ -42,7 +48,7 @@
       "name": "더우인 동영상 다운로더",
       "shortDesc": "워터마크 없이 더우인 동영상 다운로드",
       "description": "더우인 공유 링크를 붙여넣어 워터마크 없이 동영상을 다운로드하세요. 빠르고 무료이며 가입이 필요 없습니다.",
-      "inputPlaceholder": "여기에 더우인 공유 링크를 붙여넣으세요...",
+      "inputPlaceholder": "여기에 더우인 공유 링크를 붙여넣으세요...(https://v.douyin.com/xxxx/)",
       "downloadBtn": "동영상 다운로드",
       "downloading": "처리 중...",
       "instructions": {

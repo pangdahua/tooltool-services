@@ -5,7 +5,9 @@
         <span class="footer-logo">
           <span class="logo-icon">◆</span> ToolSpace
         </span>
-        <p class="footer-desc">{{ $t('site.tagline') }}</p>
+        <p class="footer-desc">
+          {{ $t('site.tagline') }}
+        </p>
       </div>
 
       <div class="footer-bottom">

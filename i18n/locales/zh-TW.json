@@ -25,7 +25,13 @@
     "copied": "已複製！",
     "tryAgain": "重試",
     "free": "免費",
-    "noRegistration": "無需註冊"
+    "noRegistration": "無需註冊",
+    "errors": {
+      "rateLimit": "超出頻率限制，請明天再試。",
+      "turnstile": "安全驗證失敗，請重試。",
+      "invalidInput": "輸入無效，請檢查您的數據。",
+      "serverError": "服務器內部錯誤，請稍後再試。"
+    }
   },
   "home": {
     "hero": {
@@ -42,7 +48,7 @@
       "name": "抖音影片下載器",
       "shortDesc": "下載無浮水印抖音影片",
       "description": "貼上抖音分享連結，即可下載無浮水印影片。快速、免費，無需註冊。",
-      "inputPlaceholder": "在此貼上抖音分享連結...",
+      "inputPlaceholder": "在此貼上抖音分享連結...(https://v.douyin.com/xxxx/)",
       "downloadBtn": "下載影片",
       "downloading": "處理中...",
       "instructions": {

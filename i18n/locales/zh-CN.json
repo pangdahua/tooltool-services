@@ -25,7 +25,13 @@
     "copied": "已复制！",
     "tryAgain": "重试",
     "free": "免费",
-    "noRegistration": "无需注册"
+    "noRegistration": "无需注册",
+    "errors": {
+      "rateLimit": "超出频率限制，请明天再试。",
+      "turnstile": "安全验证失败，请重试。",
+      "invalidInput": "输入无效，请检查您的数据。",
+      "serverError": "服务器内部错误，请稍后再试。"
+    }
   },
   "home": {
     "hero": {
@@ -42,7 +48,7 @@
       "name": "抖音视频下载器",
       "shortDesc": "下载无水印抖音视频",
       "description": "粘贴抖音分享链接，即可下载无水印视频。快速、免费，无需注册。",
-      "inputPlaceholder": "在此粘贴抖音分享链接...",
+      "inputPlaceholder": "在此粘贴抖音分享链接...（https://v.douyin.com/xxxx/）",
       "downloadBtn": "下载视频",
       "downloading": "处理中...",
       "instructions": {

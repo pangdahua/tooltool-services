@@ -25,7 +25,13 @@
     "copied": "コピーしました！",
     "tryAgain": "再試行",
     "free": "無料",
-    "noRegistration": "登録不要"
+    "noRegistration": "登録不要",
+    "errors": {
+      "rateLimit": "レート制限を超えました。明日もう一度お試しください。",
+      "turnstile": "セキュリティ検証に失敗しました。もう一度お試しください。",
+      "invalidInput": "入力が無効です。データを確認してください。",
+      "serverError": "サーバー内部エラーが発生しました。後でもう一度お試しください。"
+    }
   },
   "home": {
     "hero": {
@@ -42,7 +48,7 @@
       "name": "Douyin動画ダウンローダー",
       "shortDesc": "ウォーターマークなしでDouyin動画をダウンロード",
       "description": "Douyinの共有リンクを貼り付けて、ウォーターマークなしで動画をダウンロードできます。高速・無料・登録不要。",
-      "inputPlaceholder": "Douyinの共有リンクをここに貼り付け...",
+      "inputPlaceholder": "Douyinの共有リンクをここに貼り付け...(https://v.douyin.com/xxxx/)",
       "downloadBtn": "動画をダウンロード",
       "downloading": "処理中...",
       "instructions": {

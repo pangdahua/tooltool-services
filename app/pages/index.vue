@@ -4,8 +4,12 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1 class="hero-title">{{ $t('home.hero.title') }}</h1>
-          <p class="hero-subtitle">{{ $t('home.hero.subtitle') }}</p>
+          <h1 class="hero-title">
+            {{ $t('home.hero.title') }}
+          </h1>
+          <p class="hero-subtitle">
+            {{ $t('home.hero.subtitle') }}
+          </p>
         </div>
       </div>
     </section>
@@ -13,15 +17,34 @@
     <!-- Tools Grid -->
     <section class="tools-section">
       <div class="container">
-        <h2 class="section-title">{{ $t('home.tools.title') }}</h2>
+        <h2 class="section-title">
+          {{ $t('home.tools.title') }}
+        </h2>
         <div class="tools-grid">
           <!-- Douyin Downloader Card -->
-          <NuxtLink :to="localePath('/douyin-downloader')" class="tool-card">
+          <NuxtLink
+            :to="localePath('/douyin-downloader')"
+            class="tool-card"
+          >
             <div class="tool-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
+                <line
+                  x1="12"
+                  y1="15"
+                  x2="12"
+                  y2="3"
+                />
               </svg>
             </div>
             <div class="tool-info">
@@ -38,7 +61,10 @@
 
     <!-- Ad Placement -->
     <div class="container">
-      <AdBanner slot="homepage-bottom" variant="responsive" />
+      <AdBanner
+        ad-slot="homepage-bottom"
+        variant="responsive"
+      />
     </div>
   </div>
 </template>

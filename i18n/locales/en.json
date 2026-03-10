@@ -25,7 +25,13 @@
     "copied": "Copied!",
     "tryAgain": "Try Again",
     "free": "Free",
-    "noRegistration": "No registration required"
+    "noRegistration": "No registration required",
+    "errors": {
+      "rateLimit": "Rate limit exceeded. Please try again tomorrow.",
+      "turnstile": "Security verification failed. Please try again.",
+      "invalidInput": "Invalid input. Please check your data.",
+      "serverError": "Internal server error. Please try again later."
+    }
   },
   "home": {
     "hero": {
@@ -42,7 +48,7 @@
       "name": "Douyin Video Downloader",
       "shortDesc": "Download Douyin/TikTok videos without watermark",
       "description": "Paste a Douyin share link to download videos without watermark. Fast, free, and no registration required.",
-      "inputPlaceholder": "Paste Douyin share link here...",
+      "inputPlaceholder": "Paste Douyin share link here... (https://v.douyin.com/xxxx/)",
       "downloadBtn": "Download Video",
       "downloading": "Processing...",
       "instructions": {

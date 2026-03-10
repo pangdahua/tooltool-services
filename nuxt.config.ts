@@ -17,21 +17,11 @@ export default defineNuxtConfig({
   // https://devtools.nuxt.com
   devtools: { enabled: true },
 
-  // Env variables
-  runtimeConfig: {
-    turnstileSecretKey: '',
-    public: {
-      siteUrl: 'https://www.tooltool.services',
-      turnstileSiteKey: '',
-      googleAdsenseId: 'ca-pub-7739767559619265'
-    }
-  },
-
   compatibilityDate: '2025-03-01',
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {
-    database: true
+    db: 'sqlite',
   },
 
   // i18n configuration
@@ -55,7 +45,7 @@ export default defineNuxtConfig({
 
   // Turnstile
   turnstile: {
-    siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY || ''
+    // siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY
   },
 
 

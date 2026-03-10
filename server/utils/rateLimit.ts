@@ -1,11 +1,15 @@
 import type { H3Event } from 'h3'
+import {db, schema} from 'hub:db'
+import {eq, and} from 'drizzle-orm'
 import { TOOLS, type ToolName } from './constants'
+import { rate_limits } from 'hub:db:schema'
+
 
 /**
  * Default rate limits per tool (requests per day per IP)
  */
 const TOOL_LIMITS: Record<ToolName, number> = {
-  [TOOLS.DOUYIN_DOWNLOADER]: 20
+  [TOOLS.DOUYIN_DOWNLOADER]: 1
 }
 
 /** Default limit if tool is not in the config */
@@ -25,38 +29,40 @@ function getTodayDate(): string {
  * @param event - H3 event
  * @param toolName - Tool identifier
  */
-export async function checkRateLimit(event: H3Event, toolName: ToolName): Promise<void> {
+export async function checkRateLimit(event: H3Event, toolName: ToolName): Promise<boolean> {
   const ip = getRequestIP(event, { xForwardedFor: true }) || '127.0.0.1'
   const today = getTodayDate()
   const maxRequests = TOOL_LIMITS[toolName] ?? DEFAULT_LIMIT
-
-  const db = hubDatabase()
-
   // Find existing record
-  const existing = await db
-    .prepare('SELECT id, count FROM rate_limits WHERE ip = ? AND tool = ? AND date = ?')
-    .bind(ip, toolName, today)
-    .first()
+  const row = await db.select({
+    total: rate_limits.count
+  }).from(schema.rate_limits).where(and(
+    eq(schema.rate_limits.ip, ip),
+    eq(schema.rate_limits.sync_date, today),
+    eq(schema.rate_limits.tool, toolName)
+  )).limit(1)
 
-  if (existing) {
-    if ((existing as any).count >= maxRequests) {
-      throw createError({
-        statusCode: 429,
-        statusMessage: `Rate limit exceeded. Maximum ${maxRequests} requests per day for this tool.`
-      })
-    }
-
-    // Increment counter
-    await db
-      .prepare('UPDATE rate_limits SET count = count + 1, updated_at = ? WHERE id = ?')
-      .bind(Date.now(), (existing as any).id)
-      .run()
+  if (row.length == 0) {
+    await db.insert(schema.rate_limits).values({
+      ip,
+      sync_date: today,
+      tool: toolName,
+      count: 1,
+      createdAt: (new Date())
+    })
+    return true
   }
   else {
-    // Insert new record
-    await db
-      .prepare('INSERT INTO rate_limits (ip, tool, date, count, updated_at) VALUES (?, ?, ?, 1, ?)')
-      .bind(ip, toolName, today, Date.now())
-      .run()
+    if (row[0].total >= maxRequests) {
+      return false
+    }
+    await db.update(schema.rate_limits).set({
+      count: row[0].total + 1
+    }).where(and(
+      eq(schema.rate_limits.ip, ip),
+      eq(schema.rate_limits.sync_date, today),
+      eq(schema.rate_limits.tool, toolName)
+    ))
+    return true
   }
 }

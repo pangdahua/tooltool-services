@@ -1,16 +1,30 @@
 <template>
   <header class="app-header">
     <div class="container header-inner">
-      <NuxtLink :to="localePath('/')" class="header-logo">
+      <NuxtLink
+        :to="localePath('/')"
+        class="header-logo"
+      >
         <span class="logo-icon">◆</span>
         <span class="logo-text">ToolSpace</span>
       </NuxtLink>
 
-      <nav class="header-nav" :class="{ open: mobileMenuOpen }">
-        <NuxtLink :to="localePath('/')" class="nav-link" @click="mobileMenuOpen = false">
+      <nav
+        class="header-nav"
+        :class="{ open: mobileMenuOpen }"
+      >
+        <NuxtLink
+          :to="localePath('/')"
+          class="nav-link"
+          @click="mobileMenuOpen = false"
+        >
           {{ $t('nav.home') }}
         </NuxtLink>
-        <NuxtLink :to="localePath('/douyin-downloader')" class="nav-link" @click="mobileMenuOpen = false">
+        <NuxtLink
+          :to="localePath('/douyin-downloader')"
+          class="nav-link"
+          @click="mobileMenuOpen = false"
+        >
           {{ $t('tools.douyinDownloader.name') }}
         </NuxtLink>
       </nav>
