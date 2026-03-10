@@ -21,7 +21,11 @@ export default defineNuxtConfig({
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {
-    db: 'sqlite',
+    db: {
+      dialect: 'sqlite',
+      driver: 'd1',
+      connection: { databaseId: process.env.NUXT_CLOUNDFLARE_D1_ID}
+    }
   },
 
   // i18n configuration
