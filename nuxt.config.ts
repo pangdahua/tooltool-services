@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // https://nuxt.com/modules
-  modules: [
+  modules: ["nitro-cloudflare-dev", 
     '@nuxthub/core',
     '@nuxt/eslint',
     '@nuxt/ui',
@@ -52,7 +51,6 @@ export default defineNuxtConfig({
     // siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY
   },
 
-
   // Sitemap
   sitemap: {
     strictNuxtContentPaths: true
@@ -89,6 +87,15 @@ export default defineNuxtConfig({
         quotes: 'single',
         commaDangle: 'never'
       }
+    }
+  },
+
+  nitro: {
+    preset: "cloudflare_module",
+
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true
     }
   }
 })

@@ -1,8 +1,7 @@
 import type { H3Event } from 'h3'
-import {db, schema} from 'hub:db'
+import { db, schema } from '@nuxthub/db'
 import {eq, and} from 'drizzle-orm'
 import { TOOLS, type ToolName } from './constants'
-import { rate_limits } from 'hub:db:schema'
 
 
 /**
@@ -35,7 +34,7 @@ export async function reachedRateLimit(event: H3Event, toolName: ToolName): Prom
   const maxRequests = DEFAULT_LIMIT
   // Find existing record
   const row = await db.select({
-    total: rate_limits.count
+    total: schema.rate_limits.count
   }).from(schema.rate_limits).where(and(
     eq(schema.rate_limits.ip, ip),
     eq(schema.rate_limits.sync_date, today)
