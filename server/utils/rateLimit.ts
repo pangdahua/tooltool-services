@@ -12,7 +12,7 @@ const TOOL_LIMITS: Record<ToolName, number> = {
 }
 
 /** Default limit if tool is not in the config */
-const DEFAULT_LIMIT = 1
+const DEFAULT_LIMIT = 3
 
 /**
  * Get today's date string in YYYY-MM-DD format (UTC)
