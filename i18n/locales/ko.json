@@ -1,15 +1,13 @@
 {
-  "common": {
-    "copy": "복사",
-    "copied": "복사됨",
-    "download": "다운로드",
-    "errors": {
-      "rateLimit": "요청 한도를 초과했습니다. 내일 다시 시도해주세요.",
-      "turnstile": "보안 확인을 완료해주세요",
-      "invalidInput": "입력이 올바르지 않습니다. 데이터를 확인해주세요.",
-      "serverError": "서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
-      "general": "오류가 발생했습니다. 잠시 후 다시 시도해주세요"
-    }
+  "site": {
+    "name": "ToolSpace",
+    "tagline": "모두를 위한 무료 온라인 도구",
+    "description": "ToolSpace는 등록이 필요 없는 무료, 빠르고 사용하기 쉬운 온라인 도구 모음을 제공합니다."
+  },
+  "nav": {
+    "home": "홈",
+    "tools": "도구",
+    "about": "소개"
   },
   "footer": {
     "copyright": "© {year} ToolSpace. 모든 권리 보유.",
@@ -18,19 +16,46 @@
     "contact": "문의하기",
     "support": "고객 지원"
   },
+  "common": {
+    "download": "다운로드",
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다. 다시 시도해 주세요.",
+    "success": "성공!",
+    "paste": "붙여넣기",
+    "clear": "지우기",
+    "copy": "복사",
+    "copied": "복사됨",
+    "tryAgain": "다시 시도",
+    "free": "무료",
+    "noRegistration": "등록 필요 없음",
+    "errors": {
+      "rateLimit": "요청 한도를 초과했습니다. 내일 다시 시도해주세요.",
+      "turnstile": "보안 확인을 완료해주세요",
+      "invalidInput": "입력이 올바르지 않습니다. 데이터를 확인해주세요.",
+      "serverError": "서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
+      "general": "오류가 발생했습니다. 잠시 후 다시 시도해주세요"
+    }
+  },
+  "components": {
+    "supportedPlatforms": {
+      "title": "지원되는 플랫폼"
+    }
+  },
   "home": {
-    "title": "ToolSpace - 최고의 도구 상자",
-    "description": "생산성을 높이기 위한 무료 온라인 도구 모음. 이미지, 텍스트, 비디오, 개발 도구까지 모두 한 곳에서 제공합니다. 강력한 기능, 빠른 처리, 개인정보 보호 우선."
+    "hero": {
+      "title": "당신의 도구 상자,단순하고 효율적",
+      "subtitle": "무료 온라인 도구, 즉시 사용 가능, 등록 필요 없음."
+    },
+    "tools": {
+      "title": "사용 가능한 도구",
+      "viewAll": "전체 보기"
+    }
   },
   "tools": {
     "douyinDownloader": {
       "name": "틱톡(도우인) 다운로더",
       "shortDesc": "워터마크 없는 도우인 비디오 다운로드",
       "description": "도우인 비디오 링크를 붙여넣어 워터마크 없이 비디오를 다운로드하세요. 빠르고 무료이며 가입이 필요 없습니다.",
-      "seo": {
-        "title": "틱톡(도우인) 다운로더 - 워터마크 없는 비디오 다운로드",
-        "description": "틱톡(도우인) 비디오를 워터마크 없이 고화질 MP4 형식으로 무료로 다운로드하세요."
-      },
       "inputPlaceholder": "도우인 링크를 여기에 붙여넣으세요",
       "downloadBtn": "분석 및 다운로드",
       "downloading": "분석 중...",
@@ -46,7 +71,7 @@
         "videoTitle": "제목",
         "author": "작성자",
         "downloadVideo": "비디오 다운로드",
-        "downloadMusic": "음악 다운로드",
+        "downloadAudio": "음악 다운로드",
         "preview": "미리보기"
       },
       "errors": {
@@ -54,15 +79,16 @@
         "turnstileFailed": "보안 인증에 실패했습니다.",
         "parseFailed": "비디오 분석에 실패했습니다. 링크를 확인해주세요",
         "networkError": "네트워크 오류가 발생했습니다."
+      },
+      "seo": {
+        "title": "틱톡(도우인) 다운로더 - 워터마크 없는 비디오 다운로드",
+        "description": "틱톡(도우인) 비디오를 워터마크 없이 고화질 MP4 형식으로 무료로 다운로드하세요."
       }
     },
     "tiktokDownloader": {
       "name": "틱톡 다운로더",
+      "shortDesc": "TikTok 워터마크 없는 다운로드",
       "description": "틱톡 비디오를 워터마크 없이 다운로드합니다",
-      "seo": {
-        "title": "틱톡 다운로더 - 워터마크 없는 동영상 다운로드(TikTok.com)",
-        "description": "틱톡 비디오를 고화질 MP4 형식으로 무료로 다운로드하세요."
-      },
       "inputPlaceholder": "틱톡 링크를 여기에 붙여넣으세요",
       "downloadBtn": "분석 및 다운로드",
       "downloading": "분석 중...",
@@ -72,18 +98,27 @@
         "step2": "복사한 링크를 상단 입력란에 붙여넣습니다",
         "step3": "분석 및 다운로드 버튼을 클릭합니다"
       },
+      "result": {
+        "title": "비디오 세부 정보",
+        "videoTitle": "제목",
+        "author": "작성자",
+        "downloadVideo": "비디오 다운로드",
+        "downloadAudio": "음악 다운로드",
+        "preview": "미리보기"
+      },
       "errors": {
         "invalidUrl": "올바른 틱톡 링크를 입력해주세요",
         "parseFailed": "비디오 분석에 실패했습니다"
+      },
+      "seo": {
+        "title": "틱톡 다운로더 - 워터마크 없는 동영상 다운로드(TikTok.com)",
+        "description": "틱톡 비디오를 고화질 MP4 형식으로 무료로 다운로드하세요."
       }
     },
     "youtubeDownloader": {
       "name": "유튜브 다운로더",
+      "shortDesc": "YouTube 고화질 비디오 다운로드",
       "description": "유튜브 비디오를 간편하게 저장하세요",
-      "seo": {
-        "title": "유튜브 동영상 다운로더 - 온라인 서비스",
-        "description": "유튜브 비디오를 분석하여 다운로드 링크를 제공합니다."
-      },
       "inputPlaceholder": "유튜브 URL을 붙여넣으세요",
       "downloadBtn": "분석 및 다운로드",
       "downloading": "분석 중...",
@@ -93,18 +128,27 @@
         "step2": "URL을 상단 입력란에 붙여넣습니다",
         "step3": "다운로드 버튼을 클릭합니다"
       },
+      "result": {
+        "title": "비디오 세부 정보",
+        "videoTitle": "제목",
+        "author": "작성자",
+        "downloadVideo": "비디오 다운로드",
+        "downloadAudio": "음악 다운로드",
+        "preview": "미리보기"
+      },
       "errors": {
         "invalidUrl": "올바른 유튜브 링크를 입력해주세요",
         "parseFailed": "비디오 분석에 실패했습니다"
+      },
+      "seo": {
+        "title": "유튜브 동영상 다운로더 - 온라인 서비스",
+        "description": "유튜브 비디오를 분석하여 다운로드 링크를 제공합니다."
       }
     },
     "bilibiliDownloader": {
       "name": "비리비리 다운로더",
+      "shortDesc": "비리비리 동영상/애니메이션 다운로드",
       "description": "비리비리(Bilibili) 비디오를 저장합니다",
-      "seo": {
-        "title": "비리비리 동영상 다운로드 - Bilibili 저장",
-        "description": "비리비리 비디오를 분석하여 저장합니다."
-      },
       "inputPlaceholder": "비리비리 링크를 붙여넣으세요",
       "downloadBtn": "분석 및 다운로드",
       "downloading": "분석 중...",
@@ -114,18 +158,27 @@
         "step2": "링크를 여기에 붙여넣습니다",
         "step3": "다운로드 버튼을 클릭합니다"
       },
+      "result": {
+        "title": "비디오 세부 정보",
+        "videoTitle": "제목",
+        "author": "작성자",
+        "downloadVideo": "비디오 다운로드",
+        "downloadAudio": "음악 다운로드",
+        "preview": "미리보기"
+      },
       "errors": {
         "invalidUrl": "올바른 비리비리 링크를 입력해주세요",
         "parseFailed": "비디오 분석에 실패했습니다"
+      },
+      "seo": {
+        "title": "비리비리 동영상 다운로드 - Bilibili 저장",
+        "description": "비리비리 비디오를 분석하여 저장합니다."
       }
     },
     "redDownloader": {
       "name": "샤오홍슈 다운로더",
+      "shortDesc": "샤오홍슈 워터마크 없는 이미지/비디오",
       "description": "샤오홍슈(Xiaohongshu) 이미지와 비디오를 저장합니다",
-      "seo": {
-        "title": "샤오홍슈 다운로드 - 이미지 및 비디오 저장",
-        "description": "샤오홍슈 콘텐츠를 워터마크 없이 저장합니다."
-      },
       "inputPlaceholder": "샤오홍슈 링크를 붙여넣으세요",
       "downloadBtn": "분석 및 다운로드",
       "downloading": "분석 중...",
@@ -135,9 +188,21 @@
         "step2": "링크를 여기에 붙여넣습니다",
         "step3": "다운로드 버튼을 클릭합니다"
       },
+      "result": {
+        "title": "콘텐츠 세부 정보",
+        "videoTitle": "제목",
+        "author": "작성자",
+        "downloadVideo": "비디오 다운로드",
+        "downloadAudio": "음악 다운로드",
+        "preview": "미리보기"
+      },
       "errors": {
         "invalidUrl": "올바른 샤오홍슈 링크를 입력해주세요",
         "parseFailed": "콘텐츠 분석에 실패했습니다"
+      },
+      "seo": {
+        "title": "샤오홍슈 다운로드 - 이미지 및 비디오 저장",
+        "description": "샤오홍슈 콘텐츠를 워터마크 없이 저장합니다."
       }
     }
   },

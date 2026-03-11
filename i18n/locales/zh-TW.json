@@ -1,8 +1,33 @@
 {
+  "site": {
+    "name": "ToolSpace",
+    "tagline": "免費線上工具，人人可用",
+    "description": "ToolSpace 提供免費、快速、易用的線上工具集合，無需註冊即可使用。"
+  },
+  "nav": {
+    "home": "首頁",
+    "tools": "工具",
+    "about": "關於"
+  },
+  "footer": {
+    "copyright": "© {year} ToolSpace. 保留所有權利。",
+    "privacy": "隱私政策",
+    "terms": "服務條款",
+    "contact": "聯繫我們",
+    "support": "技術支持"
+  },
   "common": {
+    "download": "下載",
+    "loading": "載入中...",
+    "error": "發生錯誤，請稍後再試。",
+    "success": "成功！",
+    "paste": "貼上",
+    "clear": "清空",
     "copy": "複製",
     "copied": "已複製",
-    "download": "下載",
+    "tryAgain": "再次嘗試",
+    "free": "免費",
+    "noRegistration": "無需註冊",
     "errors": {
       "rateLimit": "已超過限制，請明天再試。",
       "turnstile": "請完成安全驗證",
@@ -11,19 +36,26 @@
       "general": "發生錯誤，請稍後再試"
     }
   },
+  "components": {
+    "supportedPlatforms": {
+      "title": "支援的平台"
+    }
+  },
   "home": {
-    "title": "ToolSpace - 您的終極工具箱",
-    "description": "免費且易於使用的在線工具集合，旨在提高您的生產力。圖像、文本、視頻甚至開發者工具，一應俱全。功能強大、處理快速且注重隱私。"
+    "hero": {
+      "title": "您的工具箱，簡單又高效",
+      "subtitle": "免費線上工具，即時可用，無需註冊。"
+    },
+    "tools": {
+      "title": "可用工具",
+      "viewAll": "查看全部"
+    }
   },
   "tools": {
     "douyinDownloader": {
       "name": "抖音下載器",
       "shortDesc": "無水印下載抖音視頻",
       "description": "粘貼抖音分享鏈接，無水印下載視頻。快速、免費、無需註冊。",
-      "seo": {
-        "title": "抖音下載器 - 無水印提取視頻",
-        "description": "免費下載抖音無水印視頻，支持高清MP4格式提取。"
-      },
       "inputPlaceholder": "請在此粘貼抖音分享鏈接",
       "downloadBtn": "解析並下載",
       "downloading": "解析中...",
@@ -39,7 +71,7 @@
         "videoTitle": "標題",
         "author": "作者",
         "downloadVideo": "下載視頻",
-        "downloadMusic": "下載音樂",
+        "downloadAudio": "下載音樂",
         "preview": "預覽"
       },
       "errors": {
@@ -47,15 +79,16 @@
         "turnstileFailed": "安全驗證失敗，請重試。",
         "parseFailed": "視頻解析失敗，請檢查鏈接是否有效",
         "networkError": "網絡錯誤，請檢查您的連接。"
+      },
+      "seo": {
+        "title": "抖音下載器 - 無水印提取視頻",
+        "description": "免費下載抖音無水印視頻，支持高清MP4格式提取。"
       }
     },
     "tiktokDownloader": {
       "name": "TikTok 下載器",
+      "shortDesc": "TikTok 無水印下載",
       "description": "無水印下載 TikTok 視頻",
-      "seo": {
-        "title": "TikTok 下載器 - 無水印提取(TikTok.com)",
-        "description": "免費下載 TikTok 無水印影片，支持高清MP4格式提取。"
-      },
       "inputPlaceholder": "請在此粘貼 TikTok 鏈接",
       "downloadBtn": "解析並下載",
       "downloading": "解析中...",
@@ -65,18 +98,27 @@
         "step2": "將鏈接粘貼到上方輸入框",
         "step3": "點擊解析並下載按鈕"
       },
+      "result": {
+        "title": "視頻詳情",
+        "videoTitle": "標題",
+        "author": "作者",
+        "downloadVideo": "下載視頻",
+        "downloadAudio": "下載音樂",
+        "preview": "預覽"
+      },
       "errors": {
         "invalidUrl": "請輸入有效的 TikTok 鏈接",
         "parseFailed": "視頻解析失敗"
+      },
+      "seo": {
+        "title": "TikTok 下載器 - 無水印提取(TikTok.com)",
+        "description": "免費下載 TikTok 無水印影片，支持高清MP4格式提取。"
       }
     },
     "youtubeDownloader": {
       "name": "YouTube 下載器",
+      "shortDesc": "YouTube 高清視頻下載",
       "description": "輕鬆保存 YouTube 視頻",
-      "seo": {
-        "title": "YouTube 影片下載 - 在線下載器",
-        "description": "解析 YouTube 影片並獲取下載鏈接。"
-      },
       "inputPlaceholder": "請在此粘貼 YouTube URL",
       "downloadBtn": "解析並下載",
       "downloading": "解析中...",
@@ -86,18 +128,27 @@
         "step2": "將 URL 粘貼到上方輸入框",
         "step3": "點擊下載按鈕"
       },
+      "result": {
+        "title": "視頻詳情",
+        "videoTitle": "標題",
+        "author": "作者",
+        "downloadVideo": "下載視頻",
+        "downloadAudio": "下載音樂",
+        "preview": "預覽"
+      },
       "errors": {
         "invalidUrl": "請輸入有效的 YouTube 鏈接",
         "parseFailed": "影片解析失敗"
+      },
+      "seo": {
+        "title": "YouTube 影片下載 - 在線下載器",
+        "description": "解析 YouTube 影片並獲取下載鏈接。"
       }
     },
     "bilibiliDownloader": {
       "name": "Bilibili 下載器",
+      "shortDesc": "B站視頻/番劇下載",
       "description": "保存 Bilibili (B站) 視頻",
-      "seo": {
-        "title": "Bilibili 下載 - B站影片提取",
-        "description": "解析並保存 Bilibili 視頻。"
-      },
       "inputPlaceholder": "請在此粘貼 Bilibili 鏈接",
       "downloadBtn": "解析並下載",
       "downloading": "解析中...",
@@ -107,18 +158,27 @@
         "step2": "將鏈接粘貼到此處",
         "step3": "點擊下載按鈕"
       },
+      "result": {
+        "title": "視頻詳情",
+        "videoTitle": "標題",
+        "author": "作者",
+        "downloadVideo": "下載視頻",
+        "downloadAudio": "下載音樂",
+        "preview": "預覽"
+      },
       "errors": {
         "invalidUrl": "請輸入有效的 Bilibili 鏈接",
         "parseFailed": "影片解析失敗"
+      },
+      "seo": {
+        "title": "Bilibili 下載 - B站影片提取",
+        "description": "解析並保存 Bilibili 視頻。"
       }
     },
     "redDownloader": {
       "name": "小紅書 下載器",
+      "shortDesc": "小紅書無水印圖片/視頻",
       "description": "保存小紅書圖片或視頻",
-      "seo": {
-        "title": "小紅書 下載器 - 圖片影片提取",
-        "description": "無水印保存小紅書內容。"
-      },
       "inputPlaceholder": "請在此粘貼小紅書鏈接",
       "downloadBtn": "解析並下載",
       "downloading": "解析中...",
@@ -128,21 +188,26 @@
         "step2": "將鏈接粘貼到此處",
         "step3": "點擊下載按鈕"
       },
+      "result": {
+        "title": "內容詳情",
+        "videoTitle": "標題",
+        "author": "作者",
+        "downloadVideo": "下載視頻",
+        "downloadAudio": "下載音樂",
+        "preview": "預覽"
+      },
       "errors": {
         "invalidUrl": "請輸入有效的小紅書鏈接",
         "parseFailed": "內容解析失敗"
+      },
+      "seo": {
+        "title": "小紅書 下載器 - 圖片影片提取",
+        "description": "無水印保存小紅書內容。"
       }
     }
   },
   "supportedPlatforms": {
     "title": "支持的平台",
     "subtitle": "試試其他平台的下載器"
-  },
-  "footer": {
-    "copyright": "© {year} ToolSpace. 保留所有權利。",
-    "privacy": "隱私政策",
-    "terms": "服務條款",
-    "contact": "聯繫我們",
-    "support": "技術支持"
   }
 }

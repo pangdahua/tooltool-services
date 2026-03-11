@@ -88,6 +88,7 @@
                     >
                       <td class="col-info">
                         {{ item.width }}x{{ item.height }}
+                        <span v-if="item.mimeType" class="format-info">{{ item.mimeType }}</span>
                       </td>
                       <td class="col-action">
                         <a
@@ -516,6 +517,15 @@ async function handleDownload() {
   font-weight: 600;
   font-size: 1rem;
   color: var(--color-text, #111827);
+}
+
+.format-info {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-2, #6b7280);
+  margin-top: 4px;
+  font-family: inherit;
 }
 
 .col-action {

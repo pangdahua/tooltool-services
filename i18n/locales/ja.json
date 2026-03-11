@@ -1,15 +1,13 @@
 {
-  "common": {
-    "copy": "コピー",
-    "copied": "コピーしました",
-    "download": "ダウンロード",
-    "errors": {
-      "rateLimit": "レート制限を超えました。明日もう一度お試しください。",
-      "turnstile": "検証を完了してください",
-      "invalidInput": "入力が無効です。データを確認してください。",
-      "serverError": "サーバー内部エラーが発生しました。後でもう一度お試しください。",
-      "general": "エラーが発生しました。後でもう一度お試しください"
-    }
+  "site": {
+    "name": "ToolSpace",
+    "tagline": "みんなで使える無料オンラインツール",
+    "description": "ToolSpace は、登録不要の無料、高速、使いやすいオンラインツールのコレクションを提供します。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "tools": "ツール",
+    "about": "会社概要"
   },
   "footer": {
     "copyright": "© {year} ToolSpace. 無断複写・転載を禁じます。",
@@ -18,19 +16,46 @@
     "contact": "お問い合わせ",
     "support": "サポート"
   },
+  "common": {
+    "download": "ダウンロード",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "success": "成功！",
+    "paste": "貼り付け",
+    "clear": "クリア",
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "tryAgain": "もう一度試す",
+    "free": "無料",
+    "noRegistration": "登録不要",
+    "errors": {
+      "rateLimit": "レート制限を超えました。明日もう一度お試しください。",
+      "turnstile": "検証を完了してください",
+      "invalidInput": "入力が無効です。データを確認してください。",
+      "serverError": "サーバー内部エラーが発生しました。後でもう一度お試しください。",
+      "general": "エラーが発生しました。後でもう一度お試しください"
+    }
+  },
+  "components": {
+    "supportedPlatforms": {
+      "title": "サポートされているプラットフォーム"
+    }
+  },
   "home": {
-    "title": "ToolSpace - あなたの究極のツールボックス",
-    "description": "生産性を向上させるための無料で使いやすいオンラインツールのコレクション。画像、テキスト、ビデオ、さらには開発ツールまで、すべて一箇所に。強力な機能、高速な処理、そしてプライバシー重視。"
+    "hero": {
+      "title": "あなたのツールボックス、シンプルで効率的",
+      "subtitle": "無料のオンラインツール、即座に使用可能、登録不要。"
+    },
+    "tools": {
+      "title": "利用可能なツール",
+      "viewAll": "すべて表示"
+    }
   },
   "tools": {
     "douyinDownloader": {
       "name": "TikTok(Douyin) 保存",
       "shortDesc": "ウォーターマークなしでDouyin動画をダウンロード",
       "description": "TikTok(Douyin)の動画を透かしなしで保存します",
-      "seo": {
-        "title": "TikTok(Douyin) 保存 - ウォーターマークなしダウンロード",
-        "description": "TikTok(Douyin)の動画を完全無料で、ウォーターマークなし、高画質のMP4形式で保存できます。"
-      },
       "inputPlaceholder": "動画のリンクをここに貼り付けてください",
       "downloadBtn": "解析してダウンロード",
       "downloading": "解析中...",
@@ -46,7 +71,7 @@
         "videoTitle": "タイトル",
         "author": "作成者",
         "downloadVideo": "動画をダウンロード",
-        "downloadMusic": "音楽をダウンロード",
+        "downloadAudio": "音楽をダウンロード",
         "preview": "プレビュー"
       },
       "errors": {
@@ -54,15 +79,16 @@
         "turnstileFailed": "セキュリティ認証に失敗しました。もう一度お試しください。",
         "parseFailed": "ビデオの解析に失敗しました。リンクを確認してください",
         "networkError": "ネットワークエラーです。接続を確認してください。"
+      },
+      "seo": {
+        "title": "TikTok(Douyin) 保存 - ウォーターマークなしダウンロード",
+        "description": "TikTok(Douyin)の動画を完全無料で、ウォーターマークなし、高画質のMP4形式で保存できます。"
       }
     },
     "tiktokDownloader": {
       "name": "TikTok 保存",
+      "shortDesc": "TikTok ウォーターマークなしダウンロード",
       "description": "TikTokの動画を透かしなしで保存します",
-      "seo": {
-        "title": "TikTok 保存 - ウォーターマークなしダウンロード(TikTok.com)",
-        "description": "TikTokの動画を完全無料で、ウォーターマークなし、高画質のMP4形式で保存できます。"
-      },
       "inputPlaceholder": "TikTokのリンクをここに貼り付けてください",
       "downloadBtn": "解析してダウンロード",
       "downloading": "解析中...",
@@ -72,18 +98,27 @@
         "step2": "コピーしたリンクを上の入力欄に貼り付けます",
         "step3": "「解析してダウンロード」ボタンをクリックします"
       },
+      "result": {
+        "title": "動画の詳細",
+        "videoTitle": "タイトル",
+        "author": "作成者",
+        "downloadVideo": "動画をダウンロード",
+        "downloadAudio": "音楽をダウンロード",
+        "preview": "プレビュー"
+      },
       "errors": {
         "invalidUrl": "有効なTikTokリンクを入力してください",
         "parseFailed": "ビデオの解析に失敗しました。リンクを確認してください"
+      },
+      "seo": {
+        "title": "TikTok 保存 - ウォーターマークなしダウンロード(TikTok.com)",
+        "description": "TikTokの動画を完全無料で、ウォーターマークなし、高画質のMP4形式で保存できます。"
       }
     },
     "youtubeDownloader": {
       "name": "YouTube 保存",
+      "shortDesc": "YouTube 高清動画ダウンロード",
       "description": "YouTubeの動画を簡単に保存します",
-      "seo": {
-        "title": "YouTube 動画保存 - オンラインダウンローダー",
-        "description": "YouTubeの動画を解析して、ダウンロードリンクを取得します。"
-      },
       "inputPlaceholder": "YouTubeのURLを貼り付けてください",
       "downloadBtn": "解析してダウンロード",
       "downloading": "解析中...",
@@ -93,18 +128,27 @@
         "step2": "URLを上の入力欄に貼り付けます",
         "step3": "ダウンロードボタンをクリックします"
       },
+      "result": {
+        "title": "動画の詳細",
+        "videoTitle": "タイトル",
+        "author": "作成者",
+        "downloadVideo": "動画をダウンロード",
+        "downloadAudio": "音楽をダウンロード",
+        "preview": "プレビュー"
+      },
       "errors": {
         "invalidUrl": "有効なYouTubeリンクを入力してください",
         "parseFailed": "動画の解析に失敗しました"
+      },
+      "seo": {
+        "title": "YouTube 動画保存 - オンラインダウンローダー",
+        "description": "YouTubeの動画を解析して、ダウンロードリンクを取得します。"
       }
     },
     "bilibiliDownloader": {
       "name": "Bilibili 保存",
+      "shortDesc": "B站動画/番劇ダウンロード",
       "description": "Bilibili(B站)の動画を保存します",
-      "seo": {
-        "title": "Bilibili 保存 - B站動画ダウンロード",
-        "description": "Bilibiliの動画を解析して保存します。"
-      },
       "inputPlaceholder": "Bilibiliのリンクを貼り付けてください",
       "downloadBtn": "解析してダウンロード",
       "downloading": "解析中...",
@@ -114,18 +158,27 @@
         "step2": "リンクをここに貼り付けます",
         "step3": "ダウンロードボタンをクリックします"
       },
+      "result": {
+        "title": "動画の詳細",
+        "videoTitle": "タイトル",
+        "author": "作成者",
+        "downloadVideo": "動画をダウンロード",
+        "downloadAudio": "音楽をダウンロード",
+        "preview": "プレビュー"
+      },
       "errors": {
         "invalidUrl": "有効なBilibiliリンクを入力してください",
         "parseFailed": "動画の解析に失敗しました"
+      },
+      "seo": {
+        "title": "Bilibili 保存 - B站動画ダウンロード",
+        "description": "Bilibiliの動画を解析して保存します。"
       }
     },
     "redDownloader": {
       "name": "小紅書 保存",
+      "shortDesc": "小紅書無水印画像/動画",
       "description": "小紅書(Xiaohongshu)の画像や動画を保存します",
-      "seo": {
-        "title": "小紅書 保存 - 画像・動画ダウンロード",
-        "description": "小紅書のコンテンツをウォーターマークなしで保存します。"
-      },
       "inputPlaceholder": "小紅書のリンクを貼り付けてください",
       "downloadBtn": "解析してダウンロード",
       "downloading": "解析中...",
@@ -135,9 +188,21 @@
         "step2": "リンクをここに貼り付けます",
         "step3": "ダウンロードボタンをクリックします"
       },
+      "result": {
+        "title": "コンテンツの詳細",
+        "videoTitle": "タイトル",
+        "author": "作成者",
+        "downloadVideo": "動画をダウンロード",
+        "downloadAudio": "音楽をダウンロード",
+        "preview": "プレビュー"
+      },
       "errors": {
         "invalidUrl": "有効な小紅書リンクを入力してください",
         "parseFailed": "コンテンツの解析に失敗しました"
+      },
+      "seo": {
+        "title": "小紅書 保存 - 画像・動画ダウンロード",
+        "description": "小紅書のコンテンツをウォーターマークなしで保存します。"
       }
     }
   },
