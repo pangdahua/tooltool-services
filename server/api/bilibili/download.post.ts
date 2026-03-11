@@ -44,17 +44,15 @@ export default eventHandler(async (event): Promise<ApiResponse<VideoResult | nul
     }
 
     // Using the explicit URL provided by the user for testing/cache
-    const response = await $fetch<any>("https://cache.tikhub.io/api/v1/cache/public/9b158b38-c0a0-4350-8fa4-b075df3644ec?sign=937372f74110b65afff7d2390bbce93b7e79624bc1dbc2dd79e7914201ef758f", { method: 'GET' })
+    // const response = await $fetch<any>("https://cache.tikhub.io/api/v1/cache/public/16827100-30a6-4ebc-9f16-b24b6452416c?sign=749fd473615362e734c4cf9bf27e672852c7aac69dd69f22878fc98e4c16ba78", { method: 'GET' })
+    const tikhubClient = new TikhubClient(process.env.NUXT_TIKHUB_TOKEN as string)
+    const response = await tikhubClient.fetchBilibiliVideo<any>(url)
 
-    // Extract data from response - handling the structure seen in logs
-    const data = response?.data || response
-    const code = response?.code || 200
-
+    const {code, data} = response as {code: number, data: any}
     if (code !== 200 || !data) {
       throw new BusinessError('tools.bilibiliDownloader.errors.parseFailed', 'Failed to parse Bilibili video')
     }
-
-    const dash = data.data.dash
+    const dash = data.dash
     if (!dash || !dash.video) {
         throw new BusinessError('tools.bilibiliDownloader.errors.parseFailed', 'No video data found')
     }

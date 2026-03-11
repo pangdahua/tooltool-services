@@ -70,7 +70,7 @@
                   {{ result.title }}
                 </div>
                 <div class="result-video-duration">
-                  {{ $t('tools.bilibiliDownloader.result.duration') || 'Duration' }}: {{ formatDuration(result.videoInfo.duration) }}
+                  Duration: {{ formatDuration(result.videoInfo.duration) }}
                 </div>
               </div>
               <div class="formats-table-wrapper">
@@ -82,7 +82,7 @@
                       class="format-row"
                     >
                       <td class="col-info">
-                        {{ item.width }}x{{ item.height }} / {{ item.mimeType?.split('/')[1]?.toUpperCase() || 'MP4' }}
+                        {{ item.width }}x{{ item.height }}
                       </td>
                       <td class="col-action">
                         <a
@@ -326,7 +326,6 @@ async function handleDownload() {
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   background: var(--primary-color);
-  color: white;
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 500;

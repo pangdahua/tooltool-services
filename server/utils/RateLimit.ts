@@ -42,7 +42,7 @@ export async function reachedRateLimit(event: H3Event, toolName: ToolName): Prom
   }).from(schema.rate_limits).where(and(
     eq(schema.rate_limits.ip, ip),
     eq(schema.rate_limits.sync_date, today)
-  )).limit(1)
+  )).limit(1) as { total: number }[]
 
   if (row.length == 0) {
     await db.insert(schema.rate_limits).values({
