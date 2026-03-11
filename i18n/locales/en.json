@@ -1,0 +1,176 @@
+{
+  "site": {
+    "name": "ToolSpace",
+    "tagline": "Free Online Tools for Everyone",
+    "description": "ToolSpace provides a collection of free, fast, and easy-to-use online tools. No registration required."
+  },
+  "nav": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About"
+  },
+  "footer": {
+    "copyright": "© {year} ToolSpace. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact Us",
+    "support": "Support"
+  },
+  "common": {
+    "download": "Download",
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again.",
+    "success": "Success!",
+    "paste": "Paste",
+    "clear": "Clear",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "tryAgain": "Try Again",
+    "free": "Free",
+    "noRegistration": "No registration required",
+    "errors": {
+      "rateLimit": "Rate limit exceeded. Please try again tomorrow.",
+      "turnstile": "Security verification failed. Please try again.",
+      "invalidInput": "Invalid input. Please check your data.",
+      "serverError": "Internal server error. Please try again later."
+    }
+  },
+  "components": {
+    "supportedPlatforms": {
+      "title": "Supported Platforms"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Your Toolkit,\nSimplified",
+      "subtitle": "Free online tools that just work. No sign-up, no hassle."
+    },
+    "tools": {
+      "title": "Available Tools",
+      "viewAll": "View All"
+    }
+  },
+  "tools": {
+    "douyinDownloader": {
+      "name": "Douyin Video Downloader",
+      "shortDesc": "Download Douyin videos without watermark",
+      "description": "Paste a Douyin share link to download videos without watermark. Fast, free, and no registration required.",
+      "inputPlaceholder": "Paste Douyin share link here... (https://v.douyin.com/xxxx/)",
+      "downloadBtn": "Download Video",
+      "downloading": "Processing...",
+      "instructions": {
+        "title": "How to Use",
+        "step1": "Open the Douyin app and find the video you want to download",
+        "step2": "Tap the share button and copy the link",
+        "step3": "Paste the link above and click Download",
+        "step4": "Save the video to your device"
+      },
+      "result": {
+        "title": "Video Details",
+        "videoTitle": "Title",
+        "author": "Author",
+        "downloadVideo": "Download Video",
+        "downloadAudio": "Download Audio",
+        "preview": "Preview"
+      },
+      "errors": {
+        "invalidUrl": "Please enter a valid Douyin share link",
+        "turnstileFailed": "Security verification failed. Please try again.",
+        "parseFailed": "Failed to parse the video. The link may be invalid or expired.",
+        "networkError": "Network error. Please check your connection."
+      },
+      "seo": {
+        "title": "Douyin Video Downloader - Download Without Watermark | ToolSpace",
+        "description": "Free online Douyin video downloader. Download TikTok China (Douyin) videos without watermark in high quality. No registration required."
+      }
+    },
+    "tiktokDownloader": {
+      "name": "TikTok Video Downloader",
+      "shortDesc": "TikTok Download without watermark",
+      "description": "Download TikTok videos without watermark for free. Save your favorite TikToks in HD quality with just a few clicks.",
+      "inputPlaceholder": "Paste TikTok link here...",
+      "downloadBtn": "Download Video",
+      "downloading": "Parsing TikTok...",
+      "instructions": {
+        "title": "How to Use",
+        "step1": "Copy the TikTok video link from the app or browser",
+        "step2": "Paste the link into the input field above",
+        "step3": "Click Download to save the video"
+      },
+      "errors": {
+        "invalidUrl": "Please enter a valid TikTok link",
+        "parseFailed": "Failed to parse TikTok video"
+      },
+      "seo": {
+        "title": "TikTok Video Downloader - No Watermark HD Download | ToolSpace",
+        "description": "The best online TikTok video downloader. Download TikTok videos without watermark in MP4 HD format. Fast and free."
+      }
+    },
+    "youtubeDownloader": {
+      "name": "YouTube Video Downloader",
+      "shortDesc": "YouTube HD Video Download",
+      "description": "Download YouTube videos to MP4 in high quality (up to 4K). Fast, free, and works on any device.",
+      "inputPlaceholder": "Paste YouTube link here...",
+      "downloadBtn": "Download Video",
+      "downloading": "Parsing YouTube...",
+      "instructions": {
+        "title": "How to Use",
+        "step1": "Copy the YouTube video URL",
+        "step2": "Paste the URL into the input field above",
+        "step3": "Select the quality and download"
+      },
+      "errors": {
+        "invalidUrl": "Please enter a valid YouTube link",
+        "parseFailed": "Failed to parse YouTube video"
+      },
+      "seo": {
+        "title": "YouTube Video Downloader - Convert YouTube to MP4 Online | ToolSpace",
+        "description": "Download YouTube videos for free in high quality. Support multiple formats. No software installation needed."
+      }
+    },
+    "bilibiliDownloader": {
+      "name": "Bilibili Video Downloader",
+      "shortDesc": "Bilibili (B站) Video Download",
+      "description": "Download high or standard definition videos from Bilibili easily. Support BV and AV numbers.",
+      "inputPlaceholder": "Paste Bilibili link here...",
+      "downloadBtn": "Download Video",
+      "downloading": "Connecting Bilibili...",
+      "instructions": {
+        "title": "How to Use",
+        "step1": "Copy the Bilibili video URL or ID",
+        "step2": "Paste it into the input field above",
+        "step3": "Click Download to get your video"
+      },
+      "errors": {
+        "invalidUrl": "Please enter a valid Bilibili link",
+        "parseFailed": "Failed to parse Bilibili video"
+      },
+      "seo": {
+        "title": "Bilibili Video Downloader - Save Bilibili Videos Online | ToolSpace",
+        "description": "Free online Bilibili downloader. Download videos from Bilibili (B站) without any limits. High speed and free."
+      }
+    },
+    "redDownloader": {
+      "name": "Xiaohongshu (RedNote) Downloader",
+      "shortDesc": "Download Xiaohongshu without watermark",
+      "description": "Save Xiaohongshu photos and videos without watermark in high quality. Perfect for saving content you love.",
+      "inputPlaceholder": "Paste Xiaohongshu link here...",
+      "downloadBtn": "Download Now",
+      "downloading": "Saving from RedNote...",
+      "instructions": {
+        "title": "How to Use",
+        "step1": "Copy the share link from Xiaohongshu app",
+        "step2": "Paste the link into the box above",
+        "step3": "Download the image or video files"
+      },
+      "errors": {
+        "invalidUrl": "Please enter a valid Xiaohongshu link",
+        "parseFailed": "Failed to parse Xiaohongshu record"
+      },
+      "seo": {
+        "title": "Xiaohongshu Downloader - Save Photos & Videos No Watermark | ToolSpace",
+        "description": "Free online tool to download Xiaohongshu (Red) videos and images without watermark. Clean and fast download."
+      }
+    }
+  }
+}

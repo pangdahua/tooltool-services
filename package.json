@@ -1,0 +1,53 @@
+{
+  "name": "tooltool-services",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "pnpm run build && wrangler dev",
+    "deploy": "pnpm run build && wrangler deploy",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.0",
+    "@nuxt/eslint": "^1.15.2",
+    "@nuxtjs/robots": "^5.7.1",
+    "@nuxtjs/sitemap": "^7.6.0",
+    "@nuxtjs/turnstile": "^1.1.1",
+    "better-sqlite3": "^12.6.2",
+    "drizzle-orm": "^0.45.1",
+    "vue": "^3.5.29",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^1.15.2",
+    "@nuxt/ui": "^4.5.1",
+    "@nuxthub/core": "^0.10.7",
+    "@nuxtjs/i18n": "^10.2.3",
+    "@types/better-sqlite3": "^7.6.13",
+    "drizzle-kit": "^0.31.9",
+    "eslint": "^9.39.4",
+    "nitro-cloudflare-dev": "^0.2.2",
+    "nuxt": "^4.3.1",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^2.2.12",
+    "wrangler": "^4.71.0"
+  },
+  "packageManager": "pnpm@10.31.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "workerd"
+    ],
+    "ignoredBuiltDependencies": [
+      "vue-demi"
+    ]
+  }
+}

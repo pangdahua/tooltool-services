@@ -1,0 +1,36 @@
+name="tooltool-services"
+
+[vars]
+NUXT_TURNSTILE_SECRET_KEY="0x4AAAAAACoBlYBbpmQq6pM8lkuyC2ktPFY"
+NUXT_PUBLIC_TURNSTILE_SITE_KEY="0x4AAAAAACoBla24R1wPKYm9"
+NUXT_TIKHUB_TOKEN="l7ccHvNK/Eerm1W6LYef+xXLMgeeArJa5juGvGKQTtX/lmWnOH3cUWqNPw=="
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
+
+[[routes]]
+pattern = "www.tooltool.services"
+custom_domain = true
+
+[[routes]]
+pattern = "tooltool.services"
+custom_domain = true
+
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tooltool-services"
+database_id = "7abf064a-0d06-43c7-826e-4a20efba38cb"
+migrations_dir="./server/db/migrations/sqlite"

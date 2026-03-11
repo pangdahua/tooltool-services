@@ -1,0 +1,148 @@
+{
+  "common": {
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "download": "ダウンロード",
+    "errors": {
+      "rateLimit": "レート制限を超えました。明日もう一度お試しください。",
+      "turnstile": "検証を完了してください",
+      "invalidInput": "入力が無効です。データを確認してください。",
+      "serverError": "サーバー内部エラーが発生しました。後でもう一度お試しください。",
+      "general": "エラーが発生しました。後でもう一度お試しください"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} ToolSpace. 無断複写・転載を禁じます。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "contact": "お問い合わせ",
+    "support": "サポート"
+  },
+  "home": {
+    "title": "ToolSpace - あなたの究極のツールボックス",
+    "description": "生産性を向上させるための無料で使いやすいオンラインツールのコレクション。画像、テキスト、ビデオ、さらには開発ツールまで、すべて一箇所に。強力な機能、高速な処理、そしてプライバシー重視。"
+  },
+  "tools": {
+    "douyinDownloader": {
+      "name": "TikTok(Douyin) 保存",
+      "shortDesc": "ウォーターマークなしでDouyin動画をダウンロード",
+      "description": "TikTok(Douyin)の動画を透かしなしで保存します",
+      "seo": {
+        "title": "TikTok(Douyin) 保存 - ウォーターマークなしダウンロード",
+        "description": "TikTok(Douyin)の動画を完全無料で、ウォーターマークなし、高画質のMP4形式で保存できます。"
+      },
+      "inputPlaceholder": "動画のリンクをここに貼り付けてください",
+      "downloadBtn": "解析してダウンロード",
+      "downloading": "解析中...",
+      "instructions": {
+        "title": "使い方",
+        "step1": "TikTokアプリを開き、共有ボタンをタップして「リンクをコピー」を選択します",
+        "step2": "コピーしたリンクを上の入力欄に貼り付けます",
+        "step3": "「解析してダウンロード」ボタンをクリックします",
+        "step4": "解析完了後, 動画を保存します"
+      },
+      "result": {
+        "title": "解析結果",
+        "videoTitle": "タイトル",
+        "author": "作成者",
+        "downloadVideo": "動画をダウンロード",
+        "downloadMusic": "音楽をダウンロード",
+        "preview": "プレビュー"
+      },
+      "errors": {
+        "invalidUrl": "有効なTikTok(Douyin)リンクを入力してください",
+        "turnstileFailed": "セキュリティ認証に失敗しました。もう一度お試しください。",
+        "parseFailed": "ビデオの解析に失敗しました。リンクを確認してください",
+        "networkError": "ネットワークエラーです。接続を確認してください。"
+      }
+    },
+    "tiktokDownloader": {
+      "name": "TikTok 保存",
+      "description": "TikTokの動画を透かしなしで保存します",
+      "seo": {
+        "title": "TikTok 保存 - ウォーターマークなしダウンロード(TikTok.com)",
+        "description": "TikTokの動画を完全無料で、ウォーターマークなし、高画質のMP4形式で保存できます。"
+      },
+      "inputPlaceholder": "TikTokのリンクをここに貼り付けてください",
+      "downloadBtn": "解析してダウンロード",
+      "downloading": "解析中...",
+      "instructions": {
+        "title": "使い方",
+        "step1": "TikTokアプリを開き、共有ボタンをタップして「リンクをコピー」を選択します",
+        "step2": "コピーしたリンクを上の入力欄に貼り付けます",
+        "step3": "「解析してダウンロード」ボタンをクリックします"
+      },
+      "errors": {
+        "invalidUrl": "有効なTikTokリンクを入力してください",
+        "parseFailed": "ビデオの解析に失敗しました。リンクを確認してください"
+      }
+    },
+    "youtubeDownloader": {
+      "name": "YouTube 保存",
+      "description": "YouTubeの動画を簡単に保存します",
+      "seo": {
+        "title": "YouTube 動画保存 - オンラインダウンローダー",
+        "description": "YouTubeの動画を解析して、ダウンロードリンクを取得します。"
+      },
+      "inputPlaceholder": "YouTubeのURLを貼り付けてください",
+      "downloadBtn": "解析してダウンロード",
+      "downloading": "解析中...",
+      "instructions": {
+        "title": "使い方",
+        "step1": "YouTubeで動画を選択し、URLをコピーします",
+        "step2": "URLを上の入力欄に貼り付けます",
+        "step3": "ダウンロードボタンをクリックします"
+      },
+      "errors": {
+        "invalidUrl": "有効なYouTubeリンクを入力してください",
+        "parseFailed": "動画の解析に失敗しました"
+      }
+    },
+    "bilibiliDownloader": {
+      "name": "Bilibili 保存",
+      "description": "Bilibili(B站)の動画を保存します",
+      "seo": {
+        "title": "Bilibili 保存 - B站動画ダウンロード",
+        "description": "Bilibiliの動画を解析して保存します。"
+      },
+      "inputPlaceholder": "Bilibiliのリンクを貼り付けてください",
+      "downloadBtn": "解析してダウンロード",
+      "downloading": "解析中...",
+      "instructions": {
+        "title": "使い方",
+        "step1": "Bilibiliで動画のURLまたは共有リンクをコピーします",
+        "step2": "リンクをここに貼り付けます",
+        "step3": "ダウンロードボタンをクリックします"
+      },
+      "errors": {
+        "invalidUrl": "有効なBilibiliリンクを入力してください",
+        "parseFailed": "動画の解析に失敗しました"
+      }
+    },
+    "redDownloader": {
+      "name": "小紅書 保存",
+      "description": "小紅書(Xiaohongshu)の画像や動画を保存します",
+      "seo": {
+        "title": "小紅書 保存 - 画像・動画ダウンロード",
+        "description": "小紅書のコンテンツをウォーターマークなしで保存します。"
+      },
+      "inputPlaceholder": "小紅書のリンクを貼り付けてください",
+      "downloadBtn": "解析してダウンロード",
+      "downloading": "解析中...",
+      "instructions": {
+        "title": "使い方",
+        "step1": "小紅書で「リンクをコピー」します",
+        "step2": "リンクをここに貼り付けます",
+        "step3": "ダウンロードボタンをクリックします"
+      },
+      "errors": {
+        "invalidUrl": "有効な小紅書リンクを入力してください",
+        "parseFailed": "コンテンツの解析に失敗しました"
+      }
+    }
+  },
+  "supportedPlatforms": {
+    "title": "サポートされているプラットフォーム",
+    "subtitle": "他のプラットフォームのダウンローダーもお試しください"
+  }
+}

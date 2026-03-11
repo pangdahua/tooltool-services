@@ -1,0 +1,176 @@
+{
+  "site": {
+    "name": "ToolSpace",
+    "tagline": "人人可用的免费在线工具",
+    "description": "ToolSpace 提供一系列免费、快速、易用的在线工具，无需注册即可使用。"
+  },
+  "nav": {
+    "home": "首页",
+    "tools": "工具",
+    "about": "关于"
+  },
+  "footer": {
+    "copyright": "© {year} ToolSpace. 保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "contact": "联系我们",
+    "support": "技术支持"
+  },
+  "common": {
+    "download": "下载",
+    "loading": "加载中...",
+    "error": "出现错误，请重试。",
+    "success": "成功！",
+    "paste": "粘贴",
+    "clear": "清除",
+    "copy": "复制",
+    "copied": "已复制！",
+    "tryAgain": "重试",
+    "free": "免费",
+    "noRegistration": "无需注册",
+    "errors": {
+      "rateLimit": "超出频率限制，请明天再试。",
+      "turnstile": "安全验证失败，请重试。",
+      "invalidInput": "输入无效，请检查您的数据。",
+      "serverError": "服务器内部错误，请稍后再试。"
+    }
+  },
+  "components": {
+    "supportedPlatforms": {
+      "title": "支持的平台"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "你的工具箱，\n简单高效",
+      "subtitle": "免费在线工具，即开即用，无需注册。"
+    },
+    "tools": {
+      "title": "可用工具",
+      "viewAll": "查看全部"
+    }
+  },
+  "tools": {
+    "douyinDownloader": {
+      "name": "抖音视频下载器",
+      "shortDesc": "下载无水印抖音视频",
+      "description": "粘贴抖音分享链接，即可下载无水印视频。快速、免费，无需注册。",
+      "inputPlaceholder": "在此粘贴抖音分享链接...（https://v.douyin.com/xxxx/）",
+      "downloadBtn": "下载视频",
+      "downloading": "处理中...",
+      "instructions": {
+        "title": "使用方法",
+        "step1": "打开抖音 App，找到要下载的视频",
+        "step2": "点击分享按钮，复制链接",
+        "step3": "将链接粘贴到上方输入框，点击下载",
+        "step4": "将视频保存到您的设备"
+      },
+      "result": {
+        "title": "视频详情",
+        "videoTitle": "标题",
+        "author": "作者",
+        "downloadVideo": "下载视频",
+        "downloadAudio": "下载音频",
+        "preview": "预览"
+      },
+      "errors": {
+        "invalidUrl": "请输入有效的抖音分享链接",
+        "turnstileFailed": "安全验证失败，请重试。",
+        "parseFailed": "视频解析失败，链接可能无效或已过期。",
+        "networkError": "网络错误，请检查您的网络连接。"
+      },
+      "seo": {
+        "title": "抖音视频下载器 - 无水印下载 | ToolSpace",
+        "description": "免费在线抖音视频下载工具，支持无水印高清下载抖音视频。无需注册，即可使用。"
+      }
+    },
+    "tiktokDownloader": {
+      "name": "TikTok 视频下载器",
+      "shortDesc": "TikTok 无水印分享下载",
+      "description": "简单快捷地下载无水印 TikTok 视频。只需粘贴视频链接，即可获取高清下载地址。",
+      "inputPlaceholder": "在此粘贴 TikTok 视频链接...",
+      "downloadBtn": "下载视频",
+      "downloading": "正在解析...",
+      "instructions": {
+        "title": "使用方法",
+        "step1": "在 TikTok App 或网页版中复制视频链接",
+        "step2": "将链接粘贴到此处输入框",
+        "step3": "点击下载并获取无水印视频"
+      },
+      "errors": {
+        "invalidUrl": "请输入有效的 TikTok 链接",
+        "parseFailed": "TikTok 视频解析失败"
+      },
+      "seo": {
+        "title": "TikTok 视频下载器 - 无水印高清下载 | ToolSpace",
+        "description": "免费在线 TikTok 视频下载工具。支持无水印、原画质下载。无需安装任何软件。"
+      }
+    },
+    "youtubeDownloader": {
+      "name": "YouTube 视频下载器",
+      "shortDesc": "YouTube 高清视频下载",
+      "description": "最高支持 4K 分辨率下载 YouTube 视频。支持 MP4, WebM 等多种格式。",
+      "inputPlaceholder": "在此粘贴 YouTube 视频链接...",
+      "downloadBtn": "下载视频",
+      "downloading": "正在努力解析...",
+      "instructions": {
+        "title": "使用方法",
+        "step1": "复制 YouTube 视频页面 URL",
+        "step2": "在此粘贴链接",
+        "step3": "选择合适的画质进行下载"
+      },
+      "errors": {
+        "invalidUrl": "请输入有效的 YouTube 链接",
+        "parseFailed": "YouTube 视频解析失败"
+      },
+      "seo": {
+        "title": "YouTube 视频下载器 - 在线 YouTube 转 MP4 | ToolSpace",
+        "description": "好用的 YouTube 视频下载工具，支持高清、4K 下载。免费稳定，无需注册。"
+      }
+    },
+    "bilibiliDownloader": {
+      "name": "Bilibili 视频下载器",
+      "shortDesc": "B站视频/番剧下载",
+      "description": "快速下载 Bilibili (B站) 视频。支持高清画质，支持多分段视频解析。",
+      "inputPlaceholder": "在此粘贴 Bilibili 视频链接...",
+      "downloadBtn": "下载视频",
+      "downloading": "正在连接 B站...",
+      "instructions": {
+        "title": "使用方法",
+        "step1": "打开 B站并复制视频地址 (BV/av 号)",
+        "step2": "将链接粘贴到此处输入框",
+        "step3": "解析完成后选择视频下载"
+      },
+      "errors": {
+        "invalidUrl": "请输入有效的 Bilibili 链接",
+        "parseFailed": "Bilibili 视频解析失败"
+      },
+      "seo": {
+        "title": "Bilibili 视频下载器 - B站视频在线下载 | ToolSpace",
+        "description": "免费 Bilibili 视频下载工具，支持 B站视频高清下载。无需插件，在线解析。"
+      }
+    },
+    "redDownloader": {
+      "name": "小红书下载器",
+      "shortDesc": "小红书无水印图文/视频",
+      "description": "支持下载小红书无水印高清大图和视频。一键去水印，方便保存素材。",
+      "inputPlaceholder": "在此粘贴小红书分享链接...",
+      "downloadBtn": "开始下载",
+      "downloading": "正在去水印...",
+      "instructions": {
+        "title": "使用方法",
+        "step1": "打开小红书 App，复制笔记链接",
+        "step2": "将链接粘贴到此处",
+        "step3": "点击下载按钮保存高清素材"
+      },
+      "errors": {
+        "invalidUrl": "请输入有效的小红书笔记链接",
+        "parseFailed": "小红书笔记解析失败"
+      },
+      "seo": {
+        "title": "小红书下载器 - 无水印图片/视频保存 | ToolSpace",
+        "description": "免费小红书无水印下载工具。支持保存小红书笔记高清大图、视频素材。操作简单快捷。"
+      }
+    }
+  }
+}
