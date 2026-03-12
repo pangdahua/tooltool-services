@@ -37,8 +37,12 @@
 </template>
 
 <script setup lang="ts">
-const { t, locale } = useI18n()
+import { getCanonicalUrl } from '~/utils/seo'
 
+const { t, locale } = useI18n()
+const route = useRoute()
+
+const canonicalUrl = computed(() => getCanonicalUrl(route.path, locale.value))
 const sections = [
   'acceptance',
   'serviceDescription',
@@ -63,10 +67,69 @@ function getParagraphs(text: string): string[] {
 useSeoMeta({
   title: () => `${t('terms.title')} | ToolSpace`,
   ogTitle: () => `${t('terms.title')} | ToolSpace`,
-  description: () => t('site.description')
+  description: () => t('terms.seo.description') || t('site.description'),
+  ogDescription: () => t('terms.seo.description') || t('site.description'),
+  ogUrl: canonicalUrl.value,
+  ogType: 'article',
+  ogSiteName: 'ToolSpace',
+  twitterCard: 'summary',
+  twitterTitle: () => `${t('terms.title')} | ToolSpace`,
+  twitterDescription: () => t('terms.seo.description') || t('site.description')
 })
 
 useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl.value
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'en',
+      href: getCanonicalUrl(route.path, 'en')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'zh-CN',
+      href: getCanonicalUrl(route.path, 'zh-CN')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'zh-TW',
+      href: getCanonicalUrl(route.path, 'zh-TW')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'ja',
+      href: getCanonicalUrl(route.path, 'ja')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'ko',
+      href: getCanonicalUrl(route.path, 'ko')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: canonicalUrl.value
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LegalService',
+        'name': t('terms.title'),
+        'description': t('terms.seo.description') || t('site.description'),
+        'url': canonicalUrl.value,
+        'provider': {
+          '@type': 'Organization',
+          'name': 'ToolSpace'
+        }
+      })
+    }
+  ],
   htmlAttrs: {
     lang: locale.value
   }

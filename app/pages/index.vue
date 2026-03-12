@@ -126,7 +126,7 @@
 </template>
 
 <script setup lang="ts">
-import { getCanonicalUrl, generateCommonSeo } from '~/utils/seo'
+import { getCanonicalUrl } from '~/utils/seo'
 import { generateWebSiteSchema } from '~/utils/schema'
 
 const { t, locale } = useI18n()
@@ -134,18 +134,71 @@ const localePath = useLocalePath()
 const route = useRoute()
 
 const canonicalUrl = computed(() => getCanonicalUrl(route.path, locale.value))
-const title = 'ToolSpace - Free Online Tools & Video Downloader'
-const description = computed(() => t('site.description'))
+const title = computed(() => t('home.seo.title') || 'ToolSpace - Free Online Tools & Video Downloader')
+const description = computed(() => t('home.seo.description') || t('site.description'))
 
-useSeoMeta(generateCommonSeo(title, description.value, canonicalUrl.value))
+useSeoMeta({
+  title: title.value,
+  ogTitle: title.value,
+  description: description.value,
+  ogDescription: description.value,
+  ogImage: '/images/home-og-image.jpg', // Placeholder - should be replaced with actual image
+  ogUrl: canonicalUrl.value,
+  ogType: 'website',
+  ogSiteName: 'ToolSpace',
+  twitterCard: 'summary_large_image',
+  twitterTitle: title.value,
+  twitterDescription: description.value,
+  twitterImage: '/images/home-twitter-image.jpg', // Placeholder - should be replaced with actual image
+  twitterSite: '@toolspacesite' // Placeholder - should be replaced with actual Twitter handle
+})
 
 useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl.value
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'en',
+      href: getCanonicalUrl(route.path, 'en')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'zh-CN',
+      href: getCanonicalUrl(route.path, 'zh-CN')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'zh-TW',
+      href: getCanonicalUrl(route.path, 'zh-TW')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'ja',
+      href: getCanonicalUrl(route.path, 'ja')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'ko',
+      href: getCanonicalUrl(route.path, 'ko')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: canonicalUrl.value
+    }
+  ],
   script: [
     {
       type: 'application/ld+json',
       innerHTML: JSON.stringify(generateWebSiteSchema())
     }
-  ]
+  ],
+  htmlAttrs: {
+    lang: locale.value
+  }
 })
 </script>
 

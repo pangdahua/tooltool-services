@@ -10,6 +10,14 @@
             <p class="page-desc">
               {{ $t('tools.tiktokDownloader.description') }}
             </p>
+            <div class="page-intro">
+              <p>{{ $t('tools.tiktokDownloader.intro') }}</p>
+              <ul class="features-list">
+                <li>{{ $t('tools.tiktokDownloader.features.noWaterMark') }}</li>
+                <li>{{ $t('tools.tiktokDownloader.features.highQuality') }}</li>
+                <li>{{ $t('tools.tiktokDownloader.features.fastDownload') }}</li>
+              </ul>
+            </div>
           </div>
 
           <div class="download-card">
@@ -167,7 +175,7 @@
 </template>
 
 <script setup lang="ts">
-import { getCanonicalUrl, generateCommonSeo } from '~/utils/seo'
+import { getCanonicalUrl } from '~/utils/seo'
 import { generateDownloaderSchema } from '~/utils/schema'
 
 const { t, locale } = useI18n()
@@ -178,9 +186,59 @@ const canonicalUrl = computed(() => getCanonicalUrl(route.path, locale.value))
 const title = computed(() => t('tools.tiktokDownloader.seo.title'))
 const description = computed(() => t('tools.tiktokDownloader.seo.description'))
 
-useSeoMeta(generateCommonSeo(title.value, description.value, canonicalUrl.value))
+useSeoMeta({
+  title: title.value,
+  ogTitle: title.value,
+  description: description.value,
+  ogDescription: description.value,
+  ogImage: '/images/tiktok-downloader-og.jpg', // Placeholder - should be replaced with actual image
+  ogUrl: canonicalUrl.value,
+  ogType: 'website',
+  ogSiteName: 'ToolSpace',
+  twitterCard: 'summary_large_image',
+  twitterTitle: title.value,
+  twitterDescription: description.value,
+  twitterImage: '/images/tiktok-downloader-twitter.jpg', // Placeholder - should be replaced with actual image
+  twitterSite: '@toolspacesite' // Placeholder - should be replaced with actual Twitter handle
+})
 
 useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl.value
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'en',
+      href: getCanonicalUrl(route.path, 'en')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'zh-CN',
+      href: getCanonicalUrl(route.path, 'zh-CN')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'zh-TW',
+      href: getCanonicalUrl(route.path, 'zh-TW')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'ja',
+      href: getCanonicalUrl(route.path, 'ja')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'ko',
+      href: getCanonicalUrl(route.path, 'ko')
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: canonicalUrl.value
+    }
+  ],
   script: [
     {
       type: 'application/ld+json',
@@ -190,7 +248,10 @@ useHead({
         canonicalUrl.value
       ))
     }
-  ]
+  ],
+  htmlAttrs: {
+    lang: locale.value
+  }
 })
 
 const url = ref('')
@@ -272,4 +333,27 @@ async function handleDownload() {
 
 <style scoped>
 @import "@/assets/css/downloader-shared.css";
+
+.page-intro {
+  margin: var(--space-lg) 0;
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-primary);
+}
+
+.features-list {
+  margin-top: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+.features-list li {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.features-list li:last-child {
+  margin-bottom: 0;
+}
 </style>
