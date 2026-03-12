@@ -3,8 +3,40 @@ import { TOOLS } from '../../utils/constants'
 import { reachedRateLimit } from '../../utils/RateLimit'
 
 interface VideoResult {
-  title?: string
-  downloadUrls: string[]
+  video: {
+    title?: string
+    thumbnail?: {
+      height: number
+      url: string
+      width: number
+    }
+    duration?: string
+    downloadUrls: Array<{
+      width: number
+      height: number
+      url: string
+      type: number
+      qualityLabel: string
+    }>
+  }
+}
+
+function formatDuration(seconds: number): string {
+  const h = Math.floor(seconds / 3600)
+  const m = Math.floor((seconds % 3600) / 60)
+  const s = seconds % 60
+
+  if (h > 0) {
+    return `${h}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`
+  } else {
+    return `${m}:${s.toString().padStart(2, '0')}`
+  }
+}
+
+function parseVideoId(url: string): string | null {
+  const youtubePattern = /(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/i
+  const match = url.match(youtubePattern)
+  return match?.[1] || null
 }
 
 export default eventHandler(async (event): Promise<ApiResponse<VideoResult | null>> => {
@@ -28,31 +60,53 @@ export default eventHandler(async (event): Promise<ApiResponse<VideoResult | nul
       throw new BusinessError('common.errors.rateLimit', 'Rate limit exceeded')
     }
 
+    const vid = parseVideoId(url)
+    if (!vid) {
+      throw new BusinessError('tools.youtubeDownloader.errors.invalidUrl', 'Invalid YouTube URL')
+    }
+
     const youtubePattern = /youtube\.com|youtu\.be/i
     if (!youtubePattern.test(url)) {
       throw new BusinessError('tools.youtubeDownloader.errors.invalidUrl', 'Invalid YouTube URL')
     }
 
     const tikhubClient = new TikhubClient(process.env.NUXT_TIKHUB_TOKEN as string)
-    const result = (await tikhubClient.fetchYoutubeVideo(url)) as { code: number, data: any }
-
-    if (result.code !== 200 || !result.data) {
+    const result = (await tikhubClient.fetchYoutubeVideo(vid)) as { code: number, data: any }
+    if (!result.data) {
       throw new BusinessError('tools.youtubeDownloader.errors.parseFailed', 'Failed to parse YouTube video')
     }
+    const data = result.data
 
-    // Tikhub YouTube response structure might differ, assuming typical HD/MP4 formats
-    // Based on Tikhub docs info usually it's in data.formats
-    const formats = (result.data.formats || []) as any[]
-    const downloadUrls = formats.filter(f => f.url).map(f => f.url)
+    const videoDetails = data.videoDetails
+    const streamingData = data.streamingData
+    const downloadUrls: Array<{
+      width: number
+      height: number
+      url: string
+      type: number
+      qualityLabel: string
+    }> = []
+    const thumbnail = videoDetails?.thumbnail?.thumbnails.at(-1)
+    const duration = videoDetails?.lengthSeconds ? formatDuration(Number(videoDetails.lengthSeconds)) : undefined
 
-    if (downloadUrls.length === 0) {
-      throw new BusinessError('tools.youtubeDownloader.errors.parseFailed', 'No download URLs found')
-    }
-
-    return sendSuccess({
-      title: result.data.title,
-      downloadUrls
+    streamingData.adaptiveFormats.forEach((f: any) => {
+      const t = {
+        width: f.width,
+        height: f.height,
+        url: f.url,
+        type: 1,
+        qualityLabel: f.qualityLabel
+      }
+      downloadUrls.push(t)
     })
+    const video = {
+      title: videoDetails.title,
+      thumbnail: thumbnail,
+      duration: duration,
+      downloadUrls: downloadUrls
+    }
+    
+    return sendSuccess({ video })
   }
   catch (err: unknown) {
     if (err instanceof BusinessError) {

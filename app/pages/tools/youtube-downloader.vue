@@ -66,59 +66,41 @@
                 {{ $t('tools.douyinDownloader.result.title') }}
               </h3>
               <div class="result-info-header">
-                <div class="result-video-title">
-                  {{ result.title }}
+                <div class="video-preview-container">
+                  <div v-if="result.thumbnail" class="result-thumbnail">
+                    <img :src="result.thumbnail.url" :alt="$t('tools.douyinDownloader.result.videoTitle')" class="thumbnail-img">
+                  </div>
+                  <div class="video-details">
+                    <div class="result-video-title">
+                      {{ result.title }}
+                    </div>
+                    <div v-if="result.duration" class="result-duration">
+                      Duration: {{ result.duration }}
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="result-items">
+              <div class="formats-list">
                 <div
-                  v-for="(videoUrl, index) in result.downloadUrls"
+                  v-for="(videoFormat, index) in result.downloadUrls"
                   :key="index"
-                  class="result-item"
+                  class="format-card"
                 >
-                  <div class="item-main">
-                    <div class="item-type-info">
-                      <span class="type-badge type-video">Video/Direct</span>
+                  <div class="format-info">
+                    <div class="format-title">
+                      {{ videoFormat.qualityLabel || 'Video/Direct' }}
                     </div>
-                    <div class="url-copy-wrapper">
-                      <textarea
-                        readonly
-                        class="url-textarea"
-                        :value="videoUrl"
-                        @click="($event.target as HTMLTextAreaElement).select()"
-                      />
-                      <button
-                        class="copy-btn"
-                        @click="handleCopy(videoUrl)"
-                      >
-                        {{ copyStatus[videoUrl] ? $t('common.copied') : $t('common.copy') }}
-                      </button>
+                    <div class="format-details">
+                      {{ videoFormat.width }}×{{ videoFormat.height }} • video/mp4
                     </div>
                   </div>
                   <a
-                    :href="videoUrl"
+                    :href="videoFormat.url"
                     target="_blank"
                     rel="noopener"
-                    class="item-download-btn"
+                    class="download-button"
                   >
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                      <polyline points="7 10 12 15 17 10" />
-                      <line
-                        x1="12"
-                        y1="15"
-                        x2="12"
-                        y2="3"
-                      />
-                    </svg>
-                    {{ $t('common.download') }}
+                    Download
                   </a>
                 </div>
               </div>
@@ -197,27 +179,27 @@ const isLoading = ref(false)
 const errorMsg = ref('')
 const turnstileToken = ref('')
 const turnstile = ref()
-const copyStatus = ref<Record<string, boolean>>({})
 
-interface DownloadResult {
+interface VideoFormat {
+  width: number
+  height: number
+  url: string
+  type: number
+  qualityLabel: string
+}
+
+interface VideoData {
   title: string
-  downloadUrls: string[]
+  thumbnail?: {
+    height: number
+    url: string
+    width: number
+  }
+  duration?: string
+  downloadUrls: VideoFormat[]
 }
 
-const result = ref<DownloadResult | null>(null)
-
-async function handleCopy(text: string) {
-  try {
-    await navigator.clipboard.writeText(text)
-    copyStatus.value[text] = true
-    setTimeout(() => {
-      copyStatus.value[text] = false
-    }, 2000)
-  }
-  catch (err) {
-    console.error('Failed to copy:', err)
-  }
-}
+const result = ref<VideoData | null>(null)
 
 function isValidYoutubeUrl(input: string): boolean {
   return /youtube\.com|youtu\.be/i.test(input)
@@ -243,7 +225,7 @@ async function handleDownload() {
   isLoading.value = true
 
   try {
-    const response = await $fetch<{ error: boolean, errorKey?: string, message?: string, data?: DownloadResult }>('/api/youtube/download', {
+    const response = await $fetch<{ error: boolean, errorKey?: string, message?: string, data?: { video: VideoData } }>('/api/youtube/download', {
       method: 'POST',
       body: {
         url: trimmed,
@@ -256,7 +238,7 @@ async function handleDownload() {
       return
     }
 
-    result.value = response.data as DownloadResult
+    result.value = response.data?.video || null
   }
   catch (err: unknown) {
     console.error('Download error:', err)
@@ -271,4 +253,110 @@ async function handleDownload() {
 
 <style scoped>
 @import "@/assets/css/downloader-shared.css";
+
+.result-card {
+  background: linear-gradient(to right, #8b5cf6, #a855f7);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  color: white;
+}
+
+.result-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.video-preview-container {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.result-thumbnail {
+  flex-shrink: 0;
+  width: 160px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.video-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.result-video-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  word-break: break-word;
+  margin: 0;
+}
+
+.result-duration {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.formats-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.format-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF9F3; /* 暖橙色/米白色 */
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+}
+
+.format-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.format-title {
+  color: #f97316; /* 亮橙色 */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.format-details {
+  color: #6b7280; /* 中灰色 */
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.download-button {
+  background-color: #f97316; /* 亮橙色 */
+  color: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.download-button:hover {
+  background-color: #ea580c; /* 深一点的橙色 */
+}
 </style>
