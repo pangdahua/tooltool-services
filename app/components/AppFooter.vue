@@ -13,13 +13,24 @@
       <div class="footer-links">
         <div class="footer-group">
           <h4 class="footer-title">
+            {{ $t('footer.about') }}
+          </h4>
+          <NuxtLink
+            :to="localePath('/terms')"
+            class="footer-link"
+          >
+            {{ $t('footer.terms') }}
+          </NuxtLink>
+        </div>
+        <div class="footer-group">
+          <h4 class="footer-title">
             {{ $t('footer.contact') }}
           </h4>
           <a
             href="mailto:support@tooltool.services"
             class="footer-link"
           >
-            support#tooltool.services
+            support@tooltool.services
           </a>
         </div>
       </div>
@@ -32,6 +43,10 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+const localePath = useLocalePath()
+</script>
 
 <style scoped>
 .app-footer {

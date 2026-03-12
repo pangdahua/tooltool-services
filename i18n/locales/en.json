@@ -13,8 +13,8 @@
     "copyright": "© {year} ToolSpace. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "contact": "Contact Us",
-    "support": "Support"
+    "about": "About Us",
+    "contact": "Contact Us"
   },
   "common": {
     "download": "Download",
@@ -48,6 +48,68 @@
     "tools": {
       "title": "Available Tools",
       "viewAll": "View All"
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "Welcome to ToolSpace (\"the Service\"). By accessing or using the Service, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Service.\n\nThese Terms of Service constitute a binding legal agreement between you and ToolSpace. Please read these terms carefully."
+      },
+      "serviceDescription": {
+        "title": "2. Description of Service",
+        "content": "ToolSpace provides online tools including but not limited to video downloaders, format converters, and other utilities. We are committed to providing fast, convenient online tools to help users complete daily tasks.\n\nWe reserve the right to modify, suspend, or discontinue the Service at any time without notice. We shall not be liable for any loss caused by the modification or termination of the Service."
+      },
+      "userResponsibilities": {
+        "title": "3. User Responsibilities",
+        "content": "You agree to:\n- Use the Service only for lawful purposes\n- Not infringe upon any third-party intellectual property rights\n- Not use automated tools (such as scrapers) to access the Service\n- Not attempt to hack or bypass our security measures\n- Comply with all applicable laws and regulations\n- Not distribute malware or harmful content\n- Not interfere with or disrupt the normal operation of the Service\n- Be solely responsible for the security of your account"
+      },
+      "prohibitedUses": {
+        "title": "4. Prohibited Uses",
+        "content": "You may not use the Service for:\n- Downloading or distributing copyrighted content unless you have legal rights\n- Violating any applicable laws, regulations, or rules\n- Infringing upon the privacy, publicity, or other legal rights of others\n- Commercial purposes or reselling the Service\n- Distributing false, misleading, or defamatory information\n- Engaging in any conduct that may harm ToolSpace's reputation"
+      },
+      "intellectualProperty": {
+        "title": "5. Intellectual Property",
+        "content": "ToolSpace and its content, features, and design are protected by international copyright, trademark, and other intellectual property laws. All rights, title, and interest in the Service are owned by ToolSpace or its licensors.\n\nContent you download is for personal, non-commercial use only. You may not copy, distribute, modify, or otherwise use such content for commercial purposes without the written permission of ToolSpace or the relevant rights holder."
+      },
+      "userContent": {
+        "title": "6. User Content",
+        "content": "For any content you upload, submit, or share through the Service, you retain all rights to such content.\n\nBy submitting content, you grant ToolSpace a non-exclusive, royalty-free, perpetual, irrevocable license to use, copy, modify, distribute, and display such content for the purpose of providing and improving the Service.\n\nYou represent and warrant that you have all necessary rights to submit the content and that such content does not infringe upon any third-party rights."
+      },
+      "serviceAvailability": {
+        "title": "7. Service Availability",
+        "content": "We strive to ensure the availability of the Service, but do not guarantee that the Service will be uninterrupted, timely, secure, or error-free. We shall not be liable for any loss caused by service interruptions or delays.\n\nWe may perform regular maintenance, updates, or upgrades, which may result in temporary service interruptions. We will try to notify users in advance, but do not guarantee that we will be able to do so."
+      },
+      "disclaimer": {
+        "title": "8. Disclaimer",
+        "content": "The Service is provided on an \"as is\" and \"as available\" basis without any warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.\n\nWe make no guarantees about the availability, accuracy, completeness, or reliability of the Service. Your use of the Service is at your own risk.\n\nTo the fullest extent permitted by law, we disclaim all liability for any direct or indirect damages, including but not limited to loss of profits, data loss, or business interruption."
+      },
+      "limitation": {
+        "title": "9. Limitation of Liability",
+        "content": "In no event shall ToolSpace and its affiliates, directors, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data loss, or business interruption, whether such liability is based on contract, tort (including negligence), or otherwise, even if we have been advised of the possibility of such damages.\n\nOur total liability shall not exceed the amount you paid to use the Service in the past 12 months, if any. If you have not paid any fees, our total liability shall not exceed $100 USD."
+      },
+      "indemnification": {
+        "title": "10. Indemnification",
+        "content": "You agree to indemnify, defend, and hold harmless ToolSpace and its affiliates, directors, employees, and agents from and against any and all claims, demands, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) made by any third party arising out of or related to your use of the Service, your violation of these Terms of Service, or your infringement of any third-party rights."
+      },
+      "changes": {
+        "title": "11. Changes to Terms",
+        "content": "We reserve the right to modify these Terms of Service at any time. Modified terms will be effective immediately upon posting. We will try to notify users through website announcements or email, but do not guarantee that we will be able to do so.\n\nYour continued use of the Service constitutes acceptance of the modified terms. If you do not agree to the modified terms, please stop using the Service."
+      },
+      "termination": {
+        "title": "12. Termination",
+        "content": "We reserve the right to terminate or suspend your access to the Service at any time, without prior notice, with or without cause, including but not limited to violation of these Terms of Service.\n\nUpon termination, you will no longer be able to use the Service. The provisions of these Terms of Service that survive termination shall remain in effect, including but not limited to intellectual property, disclaimer, limitation of liability, and indemnification provisions."
+      },
+      "governingLaw": {
+        "title": "13. Governing Law",
+        "content": "These Terms of Service shall be governed by the laws of your jurisdiction, without regard to its conflict of law principles.\n\nAny dispute arising out of these Terms of Service shall be submitted to the courts of competent jurisdiction."
+      },
+      "contact": {
+        "title": "14. Contact Us",
+        "content": "If you have any questions about these Terms of Service, please contact us at supporttooltool.services.\n\nWe will try to respond to your inquiries within a reasonable time."
+      }
     }
   },
   "tools": {
