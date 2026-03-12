@@ -13,17 +13,17 @@
 
         <div class="terms-content">
           <section
-            v-for="(section, key) in sections"
-            :key="key"
+            v-for="(section, index) in sections"
+            :key="index"
             class="terms-section"
           >
             <h2 class="section-title">
-              {{ $t(`terms.sections.${key}.title`) }}
+              {{ $t(`terms.sections.${section}.title`) }}
             </h2>
             <div class="section-content">
               <p
-                v-for="(paragraph, index) in getParagraphs($t(`terms.sections.${key}.content`))"
-                :key="index"
+                v-for="(paragraph, pIndex) in getParagraphs($t(`terms.sections.${section}.content`))"
+                :key="pIndex"
                 class="paragraph"
               >
                 {{ paragraph }}
@@ -85,11 +85,11 @@ useHead({
 }
 
 .page-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: var(--space-sm);
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .page-meta {
@@ -110,7 +110,7 @@ useHead({
 
 .paragraph {
   color: var(--color-text);
-  line-height: 1.75;
+  line-height: 1.6;
   margin-bottom: var(--space-md);
 }
 
