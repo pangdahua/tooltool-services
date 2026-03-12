@@ -145,6 +145,12 @@
       "seo": {
         "title": "抖音下載器 - 無水印提取視頻",
         "description": "免費下載抖音無水印視頻，支持高清MP4格式提取。"
+      },
+      "intro": "抖音视频下载器是一款免费的在线工具，帮助您轻松下载抖音平台上的无水印视频。无需安装任何软件，只需粘贴链接即可快速获取高清视频。",
+      "features": {
+        "noWaterMark": "无水印下载，保持视频清晰度",
+        "highQuality": "支持高清画质下载",
+        "fastDownload": "快速解析，一键下载"
       }
     },
     "tiktokDownloader": {
@@ -175,6 +181,12 @@
       "seo": {
         "title": "TikTok 下載器 - 無水印提取(TikTok.com)",
         "description": "免費下載 TikTok 無水印影片，支持高清MP4格式提取。"
+      },
+      "intro": "TikTok 视频下载器帮助您轻松下载 TikTok 平台上的无水印视频。支持高清画质下载，无需安装任何软件，在线即可完成。",
+      "features": {
+        "noWaterMark": "无水印下载，保持视频原清晰度",
+        "highQuality": "支持高清视频下载",
+        "fastDownload": "快速解析，秒级下载"
       }
     },
     "youtubeDownloader": {
@@ -205,6 +217,12 @@
       "seo": {
         "title": "YouTube 影片下載 - 在線下載器",
         "description": "解析 YouTube 影片並獲取下載鏈接。"
+      },
+      "intro": "YouTube 视频下载器是一款强大的在线工具，帮助您轻松下载 YouTube 平台上的高清视频。支持多种格式和多种分辨率选择，无需安装任何软件。",
+      "features": {
+        "noWatermark": "无水印下载，保持视频原貌",
+        "highQuality": "支持高清、4K 画质下载",
+        "fastDownload": "快速解析，高速下载"
       }
     },
     "bilibiliDownloader": {
@@ -226,7 +244,9 @@
         "author": "作者",
         "downloadVideo": "下載視頻",
         "downloadAudio": "下載音樂",
-        "preview": "預覽"
+        "preview": "預覽",
+        "quality": "画质",
+        "action": "操作"
       },
       "errors": {
         "invalidUrl": "請輸入有效的 Bilibili 鏈接",
@@ -235,6 +255,12 @@
       "seo": {
         "title": "Bilibili 下載 - B站影片提取",
         "description": "解析並保存 Bilibili 視頻。"
+      },
+      "intro": "Bilibili 视频下载器帮助您轻松下载 B站 平台上的高清视频和番剧。支持多种画质选择，无需安装任何软件。",
+      "features": {
+        "noWaterMark": "无水印下载，保持视频原貌",
+        "highQuality": "支持高清视频下载",
+        "fastDownload": "快速解析，一键下载"
       }
     },
     "redDownloader": {
@@ -265,6 +291,12 @@
       "seo": {
         "title": "小紅書 下載器 - 圖片影片提取",
         "description": "無水印保存小紅書內容。"
+      },
+      "intro": "小红书下载器帮助您轻松下载小红书平台上的无水印图片和视频。支持高清素材下载，无需安装任何软件。",
+      "features": {
+        "noWaterMark": "无水印下载，保持素材原貌",
+        "highQuality": "支持高清图片和视频下载",
+        "fastDownload": "快速解析，一键下载"
       }
     }
   }

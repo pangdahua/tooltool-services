@@ -145,6 +145,12 @@
       "seo": {
         "title": "틱톡(도우인) 다운로더 - 워터마크 없는 비디오 다운로드",
         "description": "틱톡(도우인) 비디오를 워터마크 없이 고화질 MP4 형식으로 무료로 다운로드하세요."
+      },
+      "intro": "抖音视频下载器是一款免费的在线工具，帮助您轻松下载抖音平台上的无水印视频。无需安装任何软件，只需粘贴链接即可快速获取高清视频。",
+      "features": {
+        "noWaterMark": "无水印下载，保持视频清晰度",
+        "highQuality": "支持高清画质下载",
+        "fastDownload": "快速解析，一键下载"
       }
     },
     "tiktokDownloader": {
@@ -175,6 +181,12 @@
       "seo": {
         "title": "틱톡 다운로더 - 워터마크 없는 동영상 다운로드(TikTok.com)",
         "description": "틱톡 비디오를 고화질 MP4 형식으로 무료로 다운로드하세요."
+      },
+      "intro": "TikTok 视频下载器帮助您轻松下载 TikTok 平台上的无水印视频。支持高清画质下载，无需安装任何软件，在线即可完成。",
+      "features": {
+        "noWaterMark": "无水印下载，保持视频原清晰度",
+        "highQuality": "支持高清视频下载",
+        "fastDownload": "快速解析，秒级下载"
       }
     },
     "youtubeDownloader": {
@@ -205,6 +217,12 @@
       "seo": {
         "title": "유튜브 동영상 다운로더 - 온라인 서비스",
         "description": "유튜브 비디오를 분석하여 다운로드 링크를 제공합니다."
+      },
+      "intro": "YouTube 视频下载器是一款强大的在线工具，帮助您轻松下载 YouTube 平台上的高清视频。支持多种格式和多种分辨率选择，无需安装任何软件。",
+      "features": {
+        "noWatermark": "无水印下载，保持视频原貌",
+        "highQuality": "支持高清、4K 画质下载",
+        "fastDownload": "快速解析，高速下载"
       }
     },
     "bilibiliDownloader": {
@@ -226,7 +244,9 @@
         "author": "작성자",
         "downloadVideo": "비디오 다운로드",
         "downloadAudio": "음악 다운로드",
-        "preview": "미리보기"
+        "preview": "미리보기",
+        "quality": "画质",
+        "action": "操作"
       },
       "errors": {
         "invalidUrl": "올바른 비리비리 링크를 입력해주세요",
@@ -235,6 +255,12 @@
       "seo": {
         "title": "비리비리 동영상 다운로드 - Bilibili 저장",
         "description": "비리비리 비디오를 분석하여 저장합니다."
+      },
+      "intro": "Bilibili 视频下载器帮助您轻松下载 B站 平台上的高清视频和番剧。支持多种画质选择，无需安装任何软件。",
+      "features": {
+        "noWaterMark": "无水印下载，保持视频原貌",
+        "highQuality": "支持高清视频下载",
+        "fastDownload": "快速解析，一键下载"
       }
     },
     "redDownloader": {
@@ -265,6 +291,12 @@
       "seo": {
         "title": "샤오홍슈 다운로드 - 이미지 및 비디오 저장",
         "description": "샤오홍슈 콘텐츠를 워터마크 없이 저장합니다."
+      },
+      "intro": "小红书下载器帮助您轻松下载小红书平台上的无水印图片和视频。支持高清素材下载，无需安装任何软件。",
+      "features": {
+        "noWaterMark": "无水印下载，保持素材原貌",
+        "highQuality": "支持高清图片和视频下载",
+        "fastDownload": "快速解析，一键下载"
       }
     }
   }
