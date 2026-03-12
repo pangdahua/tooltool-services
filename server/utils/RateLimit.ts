@@ -33,7 +33,7 @@ function getTodayDate(): string {
  * @param toolName - Tool identifier
  */
 export async function reachedRateLimit(event: H3Event, toolName: ToolName): Promise<boolean> {
-  const ip = getRequestIP(event, { xForwardedFor: true }) || '127.0.0.1'
+  const ip = getHeader(event, 'cf-connecting-ip') || getRequestIP(event, { xForwardedFor: true }) || '127.0.0.1'
   const today = getTodayDate()
   const maxRequests = TOOL_LIMITS[toolName] || DEFAULT_LIMIT
   // Find existing record

@@ -1,37 +1,58 @@
 <template>
   <footer class="app-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="footer-logo">
-          <span class="logo-icon">◆</span> ToolSpace
-        </span>
-        <p class="footer-desc">
-          {{ $t('site.tagline') }}
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <div class="footer-group">
-          <h4 class="footer-title">
-            {{ $t('footer.about') }}
-          </h4>
-          <NuxtLink
-            :to="localePath('/terms')"
-            class="footer-link"
-          >
-            {{ $t('footer.terms') }}
-          </NuxtLink>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">
+            <span class="logo-icon">◆</span> ToolSpace
+          </span>
+          <p class="footer-desc">
+            {{ $t('site.tagline') }}
+          </p>
         </div>
-        <div class="footer-group">
-          <h4 class="footer-title">
-            {{ $t('footer.contact') }}
-          </h4>
-          <a
-            href="mailto:support@tooltool.services"
-            class="footer-link"
-          >
-            support@tooltool.services
-          </a>
+
+        <div class="footer-links">
+          <div class="footer-group">
+            <h4 class="footer-title">
+              {{ $t('footer.about') }}
+            </h4>
+            <NuxtLink
+              :to="localePath('/terms')"
+              class="footer-link"
+            >
+              {{ $t('footer.terms') }}
+            </NuxtLink>
+          </div>
+          <div class="footer-group">
+            <h4 class="footer-title">
+              相关下载
+            </h4>
+            <a
+              href="https://dofollow.tools/"
+              class="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://dofollow.tools/badge/badge_transparent.svg"
+                alt="相关下载 badge"
+                class="badge-image"
+                width="120"
+                height="20"
+              />
+            </a>
+          </div>
+          <div class="footer-group">
+            <h4 class="footer-title">
+              {{ $t('footer.contact') }}
+            </h4>
+            <a
+              href="mailto:support@tooltool.services"
+              class="footer-link"
+            >
+              support@tooltool.services
+            </a>
+          </div>
         </div>
       </div>
 
@@ -56,8 +77,16 @@ const localePath = useLocalePath()
 }
 
 .footer-inner {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: var(--space-xl);
 }
 
@@ -94,8 +123,9 @@ const localePath = useLocalePath()
 
 .footer-links {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
 }
 
 .footer-link {
@@ -111,7 +141,6 @@ const localePath = useLocalePath()
 }
 
 .footer-bottom {
-  grid-column: 1 / -1;
   padding-top: var(--space-lg);
   border-top: 1px solid var(--color-border);
   text-align: center;
@@ -122,9 +151,17 @@ const localePath = useLocalePath()
   font-size: 0.8rem;
 }
 
+.badge-image {
+  display: block;
+  transition: opacity var(--transition-fast);
+}
+
+.badge-image:hover {
+  opacity: 0.8;
+}
+
 @media (max-width: 640px) {
   .footer-inner {
-    grid-template-columns: 1fr;
     text-align: center;
   }
   
