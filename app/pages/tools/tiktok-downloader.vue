@@ -52,6 +52,7 @@
                 ref="turnstile"
                 v-model="turnstileToken"
               />
+              <ServiceAgreement />
             </div>
 
             <Transition name="fade">

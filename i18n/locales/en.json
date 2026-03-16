@@ -14,7 +14,9 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "about": "About Us",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "relatedDownload": "Related Download",
+    "agreement": "By using our service you accept our {terms} and {privacy}."
   },
   "common": {
     "download": "Download",
@@ -48,6 +50,10 @@
     "tools": {
       "title": "Available Tools",
       "viewAll": "View All"
+    },
+    "seo": {
+      "title": "ToolSpace - Free Online Tools & Video Downloader",
+      "description": "ToolSpace provides a collection of free, fast, and easy-to-use online tools including video downloaders, format converters, image processing, and more. No registration required."
     }
   },
   "terms": {
@@ -145,11 +151,11 @@
         "title": "Douyin Video Downloader - Download Without Watermark | ToolSpace",
         "description": "Free online Douyin video downloader. Download TikTok China (Douyin) videos without watermark in high quality. No registration required."
       },
-      "intro": "抖音视频下载器是一款免费的在线工具，帮助您轻松下载抖音平台上的无水印视频。无需安装任何软件，只需粘贴链接即可快速获取高清视频。",
+      "intro": "Douyin Video Downloader is a free online tool that helps you easily download watermark-free videos from the Douyin platform. No software installation required, just paste the link to quickly get high-definition videos.",
       "features": {
-        "noWaterMark": "无水印下载，保持视频清晰度",
-        "highQuality": "支持高清画质下载",
-        "fastDownload": "快速解析，一键下载"
+        "noWaterMark": "Download without watermark, maintain video clarity",
+        "highQuality": "Support HD quality download",
+        "fastDownload": "Fast parsing, one-click download"
       }
     },
     "tiktokDownloader": {
@@ -173,19 +179,19 @@
         "title": "TikTok Video Downloader - No Watermark HD Download | ToolSpace",
         "description": "The best online TikTok video downloader. Download TikTok videos without watermark in MP4 HD format. Fast and free."
       },
-      "intro": "TikTok 视频下载器帮助您轻松下载 TikTok 平台上的无水印视频。支持高清画质下载，无需安装任何软件，在线即可完成。",
+      "intro": "TikTok Video Downloader helps you easily download watermark-free videos from the TikTok platform. Supports HD quality download, no software installation required, and can be completed online.",
       "features": {
-        "noWaterMark": "无水印下载，保持视频原清晰度",
-        "highQuality": "支持高清视频下载",
-        "fastDownload": "快速解析，秒级下载"
+        "noWaterMark": "Download without watermark, maintain original clarity",
+        "highQuality": "Support HD video download",
+        "fastDownload": "Fast parsing, download in seconds"
       },
       "result": {
-        "title": "视频详情",
-        "videoTitle": "标题",
-        "author": "作者",
-        "downloadVideo": "下载视频",
-        "downloadAudio": "下载音频",
-        "preview": "预览"
+        "title": "Video Details",
+        "videoTitle": "Title",
+        "author": "Author",
+        "downloadVideo": "Download Video",
+        "downloadAudio": "Download Audio",
+        "preview": "Preview"
       }
     },
     "youtubeDownloader": {
@@ -209,24 +215,24 @@
         "title": "YouTube Video Downloader - Convert YouTube to MP4 Online | ToolSpace",
         "description": "Download YouTube videos for free in high quality. Support multiple formats. No software installation needed."
       },
-      "intro": "YouTube 视频下载器是一款强大的在线工具，帮助您轻松下载 YouTube 平台上的高清视频。支持多种格式和多种分辨率选择，无需安装任何软件。",
+      "intro": "YouTube Video Downloader is a powerful online tool that helps you easily download high-definition videos from the YouTube platform. Supports multiple formats and resolution options, no software installation required.",
       "features": {
-        "noWatermark": "无水印下载，保持视频原貌",
-        "highQuality": "支持高清、4K 画质下载",
-        "fastDownload": "快速解析，高速下载"
+        "noWatermark": "Download without watermark, keep original appearance",
+        "highQuality": "Support HD, 4K quality download",
+        "fastDownload": "Fast parsing, high-speed download"
       },
       "result": {
-        "title": "视频详情",
-        "videoTitle": "标题",
-        "author": "作者",
-        "downloadVideo": "下载视频",
-        "downloadAudio": "下载音频",
-        "preview": "预览"
+        "title": "Video Details",
+        "videoTitle": "Title",
+        "author": "Author",
+        "downloadVideo": "Download Video",
+        "downloadAudio": "Download Audio",
+        "preview": "Preview"
       }
     },
     "bilibiliDownloader": {
       "name": "Bilibili Video Downloader",
-      "shortDesc": "Bilibili (B站) Video Download",
+      "shortDesc": "Bilibili Video Download",
       "description": "Download high or standard definition videos from Bilibili easily. Support BV and AV numbers.",
       "inputPlaceholder": "Paste Bilibili link here...",
       "downloadBtn": "Download Video",
@@ -243,23 +249,23 @@
       },
       "seo": {
         "title": "Bilibili Video Downloader - Save Bilibili Videos Online | ToolSpace",
-        "description": "Free online Bilibili downloader. Download videos from Bilibili (B站) without any limits. High speed and free."
+        "description": "Free online Bilibili downloader. Download videos from Bilibili without any limits. High speed and free."
       },
-      "intro": "Bilibili 视频下载器帮助您轻松下载 B站 平台上的高清视频和番剧。支持多种画质选择，无需安装任何软件。",
+      "intro": "Bilibili Video Downloader helps you easily download HD videos and anime from the Bilibili platform. Supports multiple quality options, no software installation required.",
       "features": {
-        "noWaterMark": "无水印下载，保持视频原貌",
-        "highQuality": "支持高清视频下载",
-        "fastDownload": "快速解析，一键下载"
+        "noWaterMark": "Download without watermark, keep original appearance",
+        "highQuality": "Support HD video download",
+        "fastDownload": "Fast parsing, one-click download"
       },
       "result": {
-        "title": "视频详情",
-        "videoTitle": "标题",
-        "author": "作者",
-        "downloadVideo": "下载视频",
-        "downloadAudio": "下载音频",
-        "preview": "预览",
-        "quality": "画质",
-        "action": "操作"
+        "title": "Video Details",
+        "videoTitle": "Title",
+        "author": "Author",
+        "downloadVideo": "Download Video",
+        "downloadAudio": "Download Audio",
+        "preview": "Preview",
+        "quality": "Quality",
+        "action": "Action"
       }
     },
     "redDownloader": {
@@ -283,19 +289,53 @@
         "title": "Xiaohongshu Downloader - Save Photos & Videos No Watermark | ToolSpace",
         "description": "Free online tool to download Xiaohongshu (Red) videos and images without watermark. Clean and fast download."
       },
-      "intro": "小红书下载器帮助您轻松下载小红书平台上的无水印图片和视频。支持高清素材下载，无需安装任何软件。",
+      "intro": "Xiaohongshu Downloader helps you easily download watermark-free images and videos from the Xiaohongshu platform. Supports HD material download, no software installation required.",
       "features": {
-        "noWaterMark": "无水印下载，保持素材原貌",
-        "highQuality": "支持高清图片和视频下载",
-        "fastDownload": "快速解析，一键下载"
+        "noWaterMark": "Download without watermark, keep original appearance",
+        "highQuality": "Support HD image and video download",
+        "fastDownload": "Fast parsing, one-click download"
       },
       "result": {
-        "title": "内容详情",
-        "videoTitle": "标题",
-        "author": "作者",
-        "downloadVideo": "下载视频",
-        "downloadAudio": "下载音频",
-        "preview": "预览"
+        "title": "Content Details",
+        "videoTitle": "Title",
+        "author": "Author",
+        "downloadVideo": "Download Video",
+        "downloadAudio": "Download Audio",
+        "preview": "Preview"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. Information Collection",
+        "content": "We do not require user registration. We may collect minimal technical information such as IP addresses and browser types for security and analytics purposes."
+      },
+      "usage": {
+        "title": "2. Information Usage",
+        "content": "The information collected is used solely to provide and improve our service, prevent abuse, and ensure the security of our platform."
+      },
+      "security": {
+        "title": "3. Data Security",
+        "content": "We implement industry-standard security measures to protect your information. However, no method of transmission over the internet is 100% secure."
+      },
+      "cookies": {
+        "title": "4. Cookies",
+        "content": "We use cookies to enhance your experience and analyze site traffic. You can manage cookie preferences through your browser settings."
+      },
+      "thirdParty": {
+        "title": "5. Third-party Services",
+        "content": "We may use third-party services for analytics and advertising. These services have their own privacy policies."
+      },
+      "changes": {
+        "title": "6. Changes to Policy",
+        "content": "We reserve the right to update this Privacy Policy. Any changes will be posted on this page."
+      },
+      "contact": {
+        "title": "7. Contact Us",
+        "content": "If you have questions about our Privacy Policy, please contact us at support\\@tooltool.services."
       }
     }
   }

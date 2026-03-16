@@ -22,10 +22,16 @@
             >
               {{ $t('footer.terms') }}
             </NuxtLink>
+            <NuxtLink
+              :to="localePath('/privacy')"
+              class="footer-link"
+            >
+              {{ $t('footer.privacy') }}
+            </NuxtLink>
           </div>
           <div class="footer-group">
             <h4 class="footer-title">
-              相关下载
+              {{ $t('footer.relatedDownload') }}
             </h4>
             <a
               href="https://dofollow.tools/"
@@ -35,7 +41,6 @@
             >
               <img
                 src="https://dofollow.tools/badge/badge_transparent.svg"
-                alt="相关下载 badge"
                 class="badge-image"
                 width="120"
                 height="20"

@@ -14,7 +14,9 @@
     "privacy": "隐私政策",
     "terms": "服务条款",
     "about": "关于我们",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "relatedDownload": "相关下载",
+    "agreement": "使用我们的服务即表示您接受我们的{terms}和{privacy}。"
   },
   "common": {
     "download": "下载",
@@ -41,6 +43,10 @@
     }
   },
   "home": {
+    "seo": {
+      "title": "ToolSpace - 免费在线工具和视频下载器",
+      "description": "ToolSpace 提供一系列免费、快速、易用的在线工具，包括视频下载、格式转换、图片处理等。无需注册，即开即用。"
+    },
     "hero": {
       "title": "你的工具箱，\n简单高效",
       "subtitle": "免费在线工具，即开即用，无需注册。"
@@ -296,6 +302,40 @@
       "seo": {
         "title": "小红书下载器 - 无水印图片/视频保存 | ToolSpace",
         "description": "免费小红书无水印下载工具。支持保存小红书笔记高清大图、视频素材。操作简单快捷。"
+      }
+    }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：{date}",
+    "sections": {
+      "collection": {
+        "title": "1. 信息收集",
+        "content": "我们不要求用户注册。为了安全和分析目的，我们可能会收集极少的机器技术信息，如 IP 地址和浏览器类型。"
+      },
+      "usage": {
+        "title": "2. 信息使用",
+        "content": "收集的信息仅用于提供和改进我们的服务、防止滥用并确保我们平台的安全。"
+      },
+      "security": {
+        "title": "3. 数据安全",
+        "content": "我们实施行业标准的安全措施来保护您的信息。然而，任何互联网传输方法都不是 100% 安全的。"
+      },
+      "cookies": {
+        "title": "4. Cookies",
+        "content": "我们使用 Cookie 来增强您的体验并分析网站流量。您可以通过浏览器设置管理 Cookie 首选项。"
+      },
+      "thirdParty": {
+        "title": "5. 第三方服务",
+        "content": "我们可能会使用第三方服务进行分析和广告。这些服务有其自己的隐私政策。"
+      },
+      "changes": {
+        "title": "6. 政策变更",
+        "content": "我们保留更新本隐私政策的权利。任何更改都将发布在此页面上。"
+      },
+      "contact": {
+        "title": "7. 联系我们",
+        "content": "如果您对我们的隐私政策有任何疑问，请通过 support\\@tooltool.services 与我们联系。"
       }
     }
   }

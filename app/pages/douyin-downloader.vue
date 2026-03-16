@@ -58,6 +58,7 @@
                 ref="turnstile"
                 v-model="turnstileToken"
               />
+              <ServiceAgreement />
             </div>
 
             <!-- Error Message -->

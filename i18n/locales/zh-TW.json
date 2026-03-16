@@ -14,7 +14,9 @@
     "privacy": "隱私政策",
     "terms": "服務條款",
     "about": "關於我們",
-    "contact": "聯繫我們"
+    "contact": "聯繫我們",
+    "relatedDownload": "相關下載",
+    "agreement": "使用我們的服務即表示您接受我們的{terms}和{privacy}。"
   },
   "common": {
     "download": "下載",
@@ -49,6 +51,10 @@
     "tools": {
       "title": "可用工具",
       "viewAll": "查看全部"
+    },
+    "seo": {
+      "title": "ToolSpace - 免费在线工具和视频下载器",
+      "description": "ToolSpace 提供一系列免费、快速、易用的在线工具，包括视频下载、格式转换、图片处理等。无需注册，即开即用。"
     }
   },
   "terms": {
@@ -297,6 +303,40 @@
         "noWaterMark": "无水印下载，保持素材原貌",
         "highQuality": "支持高清图片和视频下载",
         "fastDownload": "快速解析，一键下载"
+      }
+    }
+  },
+  "privacy": {
+    "title": "隱私政策",
+    "lastUpdated": "最後更新：{date}",
+    "sections": {
+      "collection": {
+        "title": "1. 資訊收集",
+        "content": "我們不要求用戶註冊。為了安全和分析目的，我們可能會收集極少的機器技術資訊，如 IP 地址和瀏覽器類型。"
+      },
+      "usage": {
+        "title": "2. 資訊使用",
+        "content": "收集的資訊僅用於提供和改進我們的服務、防止濫用並確保我們平台的安全。"
+      },
+      "security": {
+        "title": "3. 數據安全",
+        "content": "我們實施行业標準的安全措施來保護您的資訊。然而，任何互聯網傳輸方法都不是 100% 安全的。"
+      },
+      "cookies": {
+        "title": "4. Cookies",
+        "content": "我們使用 Cookie 來增強您的體驗並分析網站流量。您可以通過瀏覽器設置管理 Cookie 首選項。"
+      },
+      "thirdParty": {
+        "title": "5. 第三方服務",
+        "content": "我們可能會使用第三方服務進行分析和廣告。這些服務有其自己的隱私政策。"
+      },
+      "changes": {
+        "title": "6. 政策變更",
+        "content": "我們保留更新本隱私政策的權利。任何更改都將發布在此頁面上。"
+      },
+      "contact": {
+        "title": "7. 聯繫我們",
+        "content": "如果您對我們的隱私政策有任何疑問，請通過 support\\@tooltool.services 與我們聯繫。"
       }
     }
   }
