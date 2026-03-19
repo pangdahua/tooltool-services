@@ -54,6 +54,63 @@
     "seo": {
       "title": "ToolSpace - Free Online Tools & Video Downloader",
       "description": "ToolSpace provides a collection of free, fast, and easy-to-use online tools including video downloaders, format converters, image processing, and more. No registration required."
+    },
+    "howItWorks": {
+      "title": "How Watermark-Free Video Processing Works",
+      "step1": {
+        "title": "Choose a Tool",
+        "description": "Select the appropriate tool from our toolkit based on your needs, whether it's for TikTok, YouTube, Xiaohongshu, or other video downloads. We provide professional solutions for all platforms."
+      },
+      "step2": {
+        "title": "Input Link or Upload",
+        "description": "Paste the video link or upload the image you need to process, and our system will prepare for processing. Supports multiple formats and high-definition video downloads."
+      },
+      "step3": {
+        "title": "Download Results",
+        "description": "Once processing is complete, click the download button to save the files you need. All downloads are watermark-free high-definition videos for personal use."
+      }
+    },
+    "features": {
+      "title": "Core Advantages",
+      "feature1": {
+        "title": "Ultra-Fast Processing",
+        "description": "Using high-performance server clusters to ensure the fastest video and image processing speeds, supporting high-definition video downloads to save your valuable time."
+      },
+      "feature2": {
+        "title": "Free & No Watermark",
+        "description": "All tools are completely free to use, with downloaded videos and images containing no watermarks, preserving original quality for reasonable use, safe and reliable."
+      },
+      "feature3": {
+        "title": "Secure & Private",
+        "description": "We value your privacy and security, with all uploaded files deleted immediately after processing, never retained, ensuring your data security."
+      },
+      "feature4": {
+        "title": "Cross-Platform Support",
+        "description": "Supports various devices and browsers, whether you're using a computer, phone, or tablet, you can smoothly use our online tools."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "Are these tools really completely free?",
+        "answer": "Yes, all our tools are permanently free, no registration required, no payment needed, and you can use basic functions unlimited times. We promise core functions will always be free."
+      },
+      "q2": {
+        "question": "Will downloaded videos contain watermarks?",
+        "answer": "No, our video download tools are specifically designed to remove watermarks, and the videos you download will be clean, watermark-free high-definition videos for personal use only."
+      },
+      "q3": {
+        "question": "Which video platforms are supported?",
+        "answer": "We support downloads from multiple mainstream video platforms including TikTok, YouTube, Bilibili, Xiaohongshu, and more, with continuous updates to support additional platforms."
+      },
+      "q4": {
+        "question": "How is file security and privacy ensured?",
+        "answer": "We take user privacy seriously, with all uploaded files automatically deleted after processing, never stored on our servers, ensuring your data security."
+      },
+      "q5": {
+        "question": "How are copyright and legality issues handled?",
+        "answer": "Our service only provides technical parsing functions, does not store any video content downloaded by users, all content is temporarily parsed through edge nodes. Users are responsible for the purpose of downloaded content, for personal study, research, and appreciation only."
+      }
     }
   },
   "terms": {

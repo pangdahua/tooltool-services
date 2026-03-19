@@ -115,6 +115,122 @@
       </div>
     </section>
 
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+      <div class="container">
+        <h2 class="section-title">
+          {{ $t('home.howItWorks.title') }}
+        </h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">
+              1
+            </div>
+            <h3 class="step-title">
+              {{ $t('home.howItWorks.step1.title') }}
+            </h3>
+            <p class="step-description">
+              {{ $t('home.howItWorks.step1.description') }}
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">
+              2
+            </div>
+            <h3 class="step-title">
+              {{ $t('home.howItWorks.step2.title') }}
+            </h3>
+            <p class="step-description">
+              {{ $t('home.howItWorks.step2.description') }}
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">
+              3
+            </div>
+            <h3 class="step-title">
+              {{ $t('home.howItWorks.step3.title') }}
+            </h3>
+            <p class="step-description">
+              {{ $t('home.howItWorks.step3.description') }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-title">
+          {{ $t('home.features.title') }}
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <UIcon name="i-heroicons-bolt-solid" />
+            </div>
+            <h3 class="feature-title">
+              {{ $t('home.features.feature1.title') }}
+            </h3>
+            <p class="feature-description">
+              {{ $t('home.features.feature1.description') }}
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <UIcon name="i-heroicons-shield-check-solid" />
+            </div>
+            <h3 class="feature-title">
+              {{ $t('home.features.feature2.title') }}
+            </h3>
+            <p class="feature-description">
+              {{ $t('home.features.feature2.description') }}
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <UIcon name="i-heroicons-lock-closed-solid" />
+            </div>
+            <h3 class="feature-title">
+              {{ $t('home.features.feature3.title') }}
+            </h3>
+            <p class="feature-description">
+              {{ $t('home.features.feature3.description') }}
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <UIcon name="i-heroicons-device-phone-mobile-solid" />
+            </div>
+            <h3 class="feature-title">
+              {{ $t('home.features.feature4.title') }}
+            </h3>
+            <p class="feature-description">
+              {{ $t('home.features.feature4.description') }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">
+          {{ $t('home.faq.title') }}
+        </h2>
+        <div class="faq-container">
+          <UAccordion
+            :items="faqItems"
+            variant="soft"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- Ad Placement -->
     <div class="container">
       <AdBanner
@@ -200,6 +316,29 @@ useHead({
     lang: locale.value
   }
 })
+
+const faqItems = computed(() => [
+  {
+    label: t('home.faq.q1.question'),
+    content: t('home.faq.q1.answer')
+  },
+  {
+    label: t('home.faq.q2.question'),
+    content: t('home.faq.q2.answer')
+  },
+  {
+    label: t('home.faq.q3.question'),
+    content: t('home.faq.q3.answer')
+  },
+  {
+    label: t('home.faq.q4.question'),
+    content: t('home.faq.q4.answer')
+  },
+  {
+    label: t('home.faq.q5.question'),
+    content: t('home.faq.q5.answer')
+  }
+])
 </script>
 
 <style scoped>
@@ -304,6 +443,172 @@ useHead({
 
 .tool-card:hover .tool-icon {
   transform: scale(1.1) rotate(-5deg);
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  padding: var(--space-3xl) 0;
+  background: var(--color-surface-light);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.step-card {
+  background: var(--color-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 auto var(--space-lg);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.step-description {
+  color: var(--color-text-2);
+  line-height: 1.6;
+}
+
+/* Features Section */
+.features-section {
+  padding: var(--space-3xl) 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.feature-card {
+  background: var(--color-surface);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  margin: 0 auto var(--space-md);
+  font-size: 1.5rem;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.feature-description {
+  color: var(--color-text-2);
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: var(--space-3xl) 0;
+  background: var(--color-surface-light);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: var(--space-xl) auto 0;
+}
+
+.faq-container :deep(.u-accordion) {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.faq-container :deep(.u-accordion-item) {
+  margin-bottom: var(--space-sm);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.faq-container :deep(.u-accordion-item:last-child) {
+  margin-bottom: 0;
+}
+
+.faq-container :deep(.u-accordion-item-content) {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-surface);
+  color: var(--color-text-2);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.faq-container :deep(.u-accordion-item-trigger) {
+  padding: var(--space-md) var(--space-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--color-white);
+  width: 100%;
+  text-align: left;
+  transition: background-color var(--transition-base);
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+.faq-container :deep(.u-accordion-item-trigger:hover) {
+  background: var(--color-surface);
+}
+
+.faq-container :deep(.u-accordion-item-body) {
+  border-top: 1px solid var(--color-border);
+}
+
+.faq-container :deep(.u-accordion-item-label) {
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 .tool-info {
