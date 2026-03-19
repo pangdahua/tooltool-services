@@ -249,6 +249,66 @@
         "downloadVideo": "Download Video",
         "downloadAudio": "Download Audio",
         "preview": "Preview"
+      },
+      "guide": {
+        "title": "Complete Guide to Using TikTok Downloader",
+        "intro": "Our TikTok Downloader is a free online tool that helps you easily download high-definition videos from TikTok. Supports multiple formats and resolution options, no software installation required.",
+        "howItWorks": "How It Works",
+        "features": "Key Features",
+        "faq": "Frequently Asked Questions",
+        "howItWorksIntro": "TikTok Video Downloader uses edge node parsing technology to help you quickly access publicly available video content. All operations are performed online without installing any plugins, safe and reliable, and in line with fair use principles.",
+        "step1": {
+          "title": "Get the Video Link",
+          "desc": "Open the TikTok app, find the video you want to download, tap the share button (arrow icon), and select 'Copy Link'. Alternatively, you can share the video to your clipboard directly."
+        },
+        "step2": {
+          "title": "Paste into Input Box",
+          "desc": "Return to ToolSpace's TikTok Downloader page and paste the copied link into the input box above. Ensure the link is complete and valid, then wait for the system to recognize it."
+        },
+        "step3": {
+          "title": "Select Download Format",
+          "desc": "After successful parsing, the system will display all available video quality and format options. You can choose high-quality options as needed, supporting MP4 format download without watermark."
+        },
+        "step4": {
+          "title": "Save to Your Device",
+          "desc": "Click the download button for your preferred quality, and the video will be saved directly to your device. Mobile users can save to camera roll with one tap, while computer users can choose the save location. The entire process is fast and smooth."
+        },
+        "feature1": {
+          "title": "High Quality Without Watermark",
+          "desc": "Our tool ensures downloaded TikTok videos maintain original quality without any watermarks or additional logos. Supports high-resolution downloads allowing you to enjoy the clearest viewing experience. Download without watermark and perfectly preserve the video's original appearance."
+        },
+        "feature2": {
+          "title": "MP4 Format Support",
+          "desc": "All downloaded videos use the most universal MP4 format, which has excellent compatibility and plays smoothly on any device and player. Whether it's a phone, tablet, computer, or TV, it's perfectly supported without additional conversion."
+        },
+        "feature3": {
+          "title": "Fast Online Processing",
+          "desc": "Using high-performance server clusters and intelligent scheduling systems to ensure optimal video parsing and download speeds. No need to wait for long processing times, parsing completes in seconds, allowing you to quickly get the content you need. This free online tool saves you valuable time."
+        },
+        "feature4": {
+          "title": "Security and Privacy Protection",
+          "desc": "We strictly protect user privacy and do not store any video files downloaded by users. All processing is done temporarily at edge nodes. Your download history and personal information will not be recorded, fully complying with privacy protection principles, and you can use it with peace of mind."
+        },
+        "faq1": {
+          "question": "Is this TikTok Downloader available worldwide?",
+          "answer": "Yes, our TikTok Downloader is accessible globally and works in all regions where TikTok is available. As a free online tool, it doesn't have geographic restrictions, allowing users from around the world to download TikTok videos without watermark."
+        },
+        "faq2": {
+          "question": "Where are the downloaded videos saved?",
+          "answer": "For iOS users: Videos are saved to the 'Files' app by default, from where you can easily transfer them to your camera roll. For Android users: Videos are typically saved to the 'Downloads' folder and can be accessed through your device's gallery or file manager. On computers, you can choose the save location during download."
+        },
+        "faq3": {
+          "question": "Can I download TikTok audio or music only?",
+          "answer": "Currently, our tool focuses on video downloads. While TikTok videos include audio, we don't offer a separate audio-only download option. However, you can still enjoy the full video experience with original audio quality."
+        },
+        "faq4": {
+          "question": "Will the original creator know I downloaded their video?",
+          "answer": "No, downloading videos through our tool is completely private and anonymous. We don't track or report download activities to TikTok or content creators. The download process happens through our edge nodes without contacting the original creator, ensuring your privacy and leaving no trace."
+        },
+        "faq5": {
+          "question": "Why does the tool sometimes fail to parse links?",
+          "answer": "Parsing may fail for several reasons: the video might be set to private or unlisted by the creator, the TikTok URL could be expired or malformed, regional restrictions may apply, or the video might have been removed. Only publicly accessible TikTok videos can be processed by our tool."
+        }
       }
     },
     "youtubeDownloader": {
@@ -383,6 +443,66 @@
         "preview": "Preview",
         "quality": "Quality",
         "action": "Action"
+      },
+      "guide": {
+        "title": "Complete Guide to Using Bilibili Downloader",
+        "intro": "Our Bilibili Downloader is a free online tool that helps you easily download high-definition videos from Bilibili. Supports multiple formats and resolution options, no software installation required.",
+        "howItWorks": "How It Works",
+        "features": "Key Features",
+        "faq": "Frequently Asked Questions",
+        "howItWorksIntro": "Bilibili Video Downloader uses edge node parsing technology to help you quickly access publicly available video content. All operations are performed online without installing any plugins, safe and reliable, and in line with fair use principles.",
+        "step1": {
+          "title": "Get the Video Link",
+          "desc": "Open the Bilibili app or website, find the video you want to download, tap the share button, and select 'Copy Link'. Supports standard Bilibili links and BV/AV numbers."
+        },
+        "step2": {
+          "title": "Paste into Input Box",
+          "desc": "Return to ToolSpace's Bilibili Downloader page and paste the copied link into the input box above. Ensure the link is complete and valid, then wait for the system to recognize it."
+        },
+        "step3": {
+          "title": "Select Download Format",
+          "desc": "After successful parsing, the system will display all available video quality and format options. You can choose high-quality options like 720p, 1080p as needed, supporting MP4 format download."
+        },
+        "step4": {
+          "title": "Save to Your Device",
+          "desc": "Click the download button for your preferred quality, and the video will be saved directly to your device. Mobile users can save to camera roll with one tap, while computer users can choose the save location. The entire process is fast and smooth."
+        },
+        "feature1": {
+          "title": "High Quality Without Watermark",
+          "desc": "Our tool ensures downloaded Bilibili videos maintain original quality without any watermarks or additional logos. Supports multiple resolution options allowing you to enjoy the clearest viewing experience. Download without watermark and perfectly preserve the video's original appearance."
+        },
+        "feature2": {
+          "title": "MP4 Format Support",
+          "desc": "All downloaded videos use the most universal MP4 format, which has excellent compatibility and plays smoothly on any device and player. Whether it's a phone, tablet, computer, or TV, it's perfectly supported without additional conversion."
+        },
+        "feature3": {
+          "title": "Fast Online Processing",
+          "desc": "Using high-performance server clusters and intelligent scheduling systems to ensure optimal video parsing and download speeds. No need to wait for long processing times, parsing completes in seconds, allowing you to quickly get the content you need. This free online tool saves you valuable time."
+        },
+        "feature4": {
+          "title": "Security and Privacy Protection",
+          "desc": "We strictly protect user privacy and do not store any video files downloaded by users. All processing is done temporarily at edge nodes. Your download history and personal information will not be recorded, fully complying with privacy protection principles, and you can use it with peace of mind."
+        },
+        "faq1": {
+          "question": "Is this Bilibili Downloader available worldwide?",
+          "answer": "Yes, our Bilibili Downloader is accessible globally and works in all regions where Bilibili is available. As a free online tool, it doesn't have geographic restrictions, allowing users from around the world to download Bilibili videos without watermark."
+        },
+        "faq2": {
+          "question": "Where are the downloaded videos saved?",
+          "answer": "For iOS users: Videos are saved to the 'Files' app by default, from where you can easily transfer them to your camera roll. For Android users: Videos are typically saved to the 'Downloads' folder and can be accessed through your device's gallery or file manager. On computers, you can choose the save location during download."
+        },
+        "faq3": {
+          "question": "Can I download Bilibili cover images?",
+          "answer": "While our primary function is video downloading, we focus on providing high-quality video downloads without watermark. For cover images, you can right-click and save the thumbnail image directly from Bilibili."
+        },
+        "faq4": {
+          "question": "Will the original creator know I downloaded their video?",
+          "answer": "No, downloading videos through our tool is completely private and anonymous. We don't track or report download activities to Bilibili or content creators. The download process happens through our edge nodes without contacting the original creator, ensuring your privacy and leaving no trace."
+        },
+        "faq5": {
+          "question": "Why does the tool sometimes fail to parse links?",
+          "answer": "Parsing may fail for several reasons: the video might be set to private or unlisted by the creator, the Bilibili URL could be expired or malformed, regional restrictions may apply, or the video might have been removed. Only publicly accessible Bilibili videos can be processed by our tool."
+        }
       }
     },
     "redDownloader": {
