@@ -151,6 +151,184 @@
             />
           </div>
         </aside>
+
+        <!-- Detailed Guide Section -->
+        <div class="guide-section">
+          <div class="guide-tabs">
+            <button 
+              :class="['guide-tab', { active: activeTab === 'how-it-works' }]"
+              @click="activeTab = 'how-it-works'"
+            >
+              {{ $t('tools.youtubeDownloader.guide.howItWorks') }}
+            </button>
+            <button 
+              :class="['guide-tab', { active: activeTab === 'features' }]"
+              @click="activeTab = 'features'"
+            >
+              {{ $t('tools.youtubeDownloader.guide.features') }}
+            </button>
+            <button 
+              :class="['guide-tab', { active: activeTab === 'faq' }]"
+              @click="activeTab = 'faq'"
+            >
+              {{ $t('tools.youtubeDownloader.guide.faq') }}
+            </button>
+          </div>
+
+          <div class="guide-content">
+            <!-- How it Works -->
+            <div v-if="activeTab === 'how-it-works'" class="guide-content-panel">
+              <h3>
+                {{ $t('tools.youtubeDownloader.guide.howItWorks') }}
+              </h3>
+              <p>
+                {{ $t('tools.youtubeDownloader.guide.howItWorksIntro') }}
+              </p>
+              
+              <div class="guide-steps">
+                <div class="guide-step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h4>
+                      {{ $t('tools.youtubeDownloader.guide.step1.title') }}
+                    </h4>
+                    <p>
+                      {{ $t('tools.youtubeDownloader.guide.step1.desc') }}
+                    </p>
+                  </div>
+                </div>
+                <div class="guide-step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h4>
+                      {{ $t('tools.youtubeDownloader.guide.step2.title') }}
+                    </h4>
+                    <p>
+                      {{ $t('tools.youtubeDownloader.guide.step2.desc') }}
+                    </p>
+                  </div>
+                </div>
+                <div class="guide-step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h4>
+                      {{ $t('tools.youtubeDownloader.guide.step3.title') }}
+                    </h4>
+                    <p>
+                      {{ $t('tools.youtubeDownloader.guide.step3.desc') }}
+                    </p>
+                  </div>
+                </div>
+                <div class="guide-step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h4>
+                      {{ $t('tools.youtubeDownloader.guide.step4.title') }}
+                    </h4>
+                    <p>
+                      {{ $t('tools.youtubeDownloader.guide.step4.desc') }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div v-if="activeTab === 'features'" class="guide-content-panel">
+              <h3>
+                {{ $t('tools.youtubeDownloader.guide.features') }}
+              </h3>
+              
+              <div class="feature-section">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.feature1.title') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.feature1.desc') }}
+                </p>
+              </div>
+              
+              <div class="feature-section">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.feature2.title') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.feature2.desc') }}
+                </p>
+              </div>
+              
+              <div class="feature-section">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.feature3.title') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.feature3.desc') }}
+                </p>
+              </div>
+              
+              <div class="feature-section">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.feature4.title') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.feature4.desc') }}
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ -->
+            <div v-if="activeTab === 'faq'" class="guide-content-panel">
+              <h3>
+                {{ $t('tools.youtubeDownloader.guide.faq') }}
+              </h3>
+              
+              <div class="faq-item">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.faq1.question') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.faq1.answer') }}
+                </p>
+              </div>
+              
+              <div class="faq-item">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.faq2.question') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.faq2.answer') }}
+                </p>
+              </div>
+              
+              <div class="faq-item">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.faq3.question') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.faq3.answer') }}
+                </p>
+              </div>
+              
+              <div class="faq-item">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.faq4.question') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.faq4.answer') }}
+                </p>
+              </div>
+              
+              <div class="faq-item">
+                <h4>
+                  {{ $t('tools.youtubeDownloader.guide.faq5.question') }}
+                </h4>
+                <p>
+                  {{ $t('tools.youtubeDownloader.guide.faq5.answer') }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -241,6 +419,7 @@ const isLoading = ref(false)
 const errorMsg = ref('')
 const turnstileToken = ref('')
 const turnstile = ref()
+const activeTab = ref('how-it-works')
 
 interface VideoFormat {
   width: number
@@ -338,6 +517,143 @@ async function handleDownload() {
 .features-list li:last-child {
    margin-bottom: 0;
  }
+
+/* Guide Section */
+.guide-section {
+  background: var(--color-surface, #f8f9fa);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-lg, 16px);
+  margin: var(--space-xl) 0;
+  overflow: hidden;
+}
+
+.guide-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+  background: var(--color-surface-light, #fafafa);
+}
+
+.guide-tab {
+  padding: 16px 24px;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-2, #6b7280);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+  flex: 1;
+  text-align: center;
+}
+
+.guide-tab.active {
+  color: var(--color-primary, #2563eb);
+  border-bottom-color: var(--color-primary, #2563eb);
+  background: var(--color-white, #ffffff);
+}
+
+.guide-tab:hover:not(.active) {
+  color: var(--color-text, #111827);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.guide-content {
+  padding: 24px;
+}
+
+.guide-content-panel h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text, #111827);
+  margin: 0 0 16px 0;
+}
+
+.guide-content-panel p {
+  color: var(--color-text-2, #6b7280);
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.guide-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.guide-step {
+  display: flex;
+  gap: 16px;
+}
+
+.step-number {
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary, #2563eb);
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text, #111827);
+  margin: 0 0 8px 0;
+}
+
+.step-content p {
+  margin: 0;
+  color: var(--color-text-2, #6b7280);
+  line-height: 1.6;
+}
+
+.feature-section {
+  margin-bottom: 24px;
+}
+
+.feature-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text, #111827);
+  margin: 0 0 8px 0;
+}
+
+.feature-section p {
+  margin: 0;
+  color: var(--color-text-2, #6b7280);
+  line-height: 1.6;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.faq-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text, #111827);
+  margin: 0 0 8px 0;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--color-text-2, #6b7280);
+  line-height: 1.6;
+}
 .result-card {
   background: linear-gradient(to right, #8b5cf6, #a855f7);
   padding: var(--space-lg);
