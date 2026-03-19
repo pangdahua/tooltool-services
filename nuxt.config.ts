@@ -32,10 +32,7 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
-      { code: 'zh-CN', language: 'zh-CN', name: '简体中文', file: 'zh-CN.json' },
-      { code: 'zh-TW', language: 'zh-TW', name: '繁體中文', file: 'zh-TW.json' },
-      { code: 'ko', language: 'ko-KR', name: '한국어', file: 'ko.json' },
-      { code: 'ja', language: 'ja-JP', name: '日本語', file: 'ja.json' }
+      { code: 'zh-CN', language: 'zh-CN', name: '简体中文', file: 'zh-CN.json' }
     ],
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
